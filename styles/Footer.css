@@ -1,0 +1,18 @@
+footer {
+  background: var(--main-kleur);
+  height: 80px;
+
+  ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    height: 100%;
+    align-items: center;
+    gap: 30px;
+
+    a {
+      color: var(--tertiary-kleur);
+      text-decoration: none;
+    }
+  }
+}

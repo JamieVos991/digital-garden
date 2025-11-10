@@ -1,10 +1,29 @@
 main {
+  height: 100vh;
+
+  @media (min-width: 900px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+    grid-template-areas:
+      "title  content"
+      "title  content"
+      "footer  content";
+  }
+
   section:nth-of-type(1) {
     min-height: 400px;
     display: flex;
     align-items: center;
     padding: 50px 30px;
     justify-content: center;
+    grid-area: title;
+
+    @media (min-width: 900px) {
+      overflow: hidden;
+      width: 50vw;
+    }
 
     ul {
       display: flex;
@@ -49,8 +68,14 @@ main {
 
   section:nth-of-type(2) {
     background: var(--secundary-kleur);
-    min-height: 200px;
     padding: 30px;
+    grid-area: content;
+    min-height: 300px;
+
+    @media (min-width: 900px) {
+      width: 50vw;
+      overflow-y: auto;
+    }
 
     ul {
       list-style: none;

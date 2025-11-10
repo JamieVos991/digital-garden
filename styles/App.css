@@ -20,6 +20,10 @@ body {
   background: var(--main-kleur);
   font-family: var(--font);
   color: white;
+
+  @media (min-width: 900px) {
+    overflow: hidden;
+  }
 }
 
 button {

@@ -1,6 +1,7 @@
 footer {
   background: var(--main-kleur);
   height: 80px;
+  grid-area: footer;
 
   ul {
     display: flex;

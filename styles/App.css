@@ -10,10 +10,27 @@
   --main-kleur: #3a0519;
   --secundary-kleur: #670e2f;
   --tertiary-kleur: #ee87ac;
+
+  --font: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+
+  --border-radius: 5px;
 }
 
 body {
   background: var(--main-kleur);
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: var(--font);
   color: white;
+}
+
+button {
+  font-family: var(--font);
+  background-color: var(--tertiary-kleur);
+  color: var(--secundary-kleur);
+  border-radius: var(--border-radius);
+  border: none;
+  letter-spacing: 1px;
+  width: max-content;
+  cursor: pointer;
+  height: 30px;
+  padding: 0 15px;
 }

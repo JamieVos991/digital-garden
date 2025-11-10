@@ -28,17 +28,14 @@ body {
 
 button {
   font-family: var(--font);
-  background-color: var(--tertiary-kleur);
-  color: var(--secundary-kleur);
+  background: var(--tertiary-kleur);
   border-radius: var(--border-radius);
+  color: var(--secundary-kleur);
   border: none;
   letter-spacing: 1px;
-  width: fit-content;
   cursor: pointer;
-  height: 30px;
-  padding: 15px 30px;
-  display: flex;
-  align-items: center;
+  font-size: 0.8rem;
+  padding: 12px 30px;
 }
 
 a {

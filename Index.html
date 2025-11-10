@@ -84,7 +84,7 @@
           </li>
           <li>
             <h4>Dinsdag 2 september 2025</h4>
-            <p>Vandaag ben ik veel met selectors gaan werken. Ik merk dat het veel overzichterlijker is dat als je andere selectors gebruikt in plaats van alleen classes en id's. Ik gebruik nu veel <code>nth-type-of()</code>. Ik had een <a href="https://flukeout.github.io/" target="_blank">spel</a> gespeeld waarmee je allemaal nieuwe selectors leerde kennen. Een paar die ik heb geleerd:</p>
+            <p>Vandaag ben ik veel met selectors gaan werken. Ik merk dat het veel overzichterlijker is dat als je andere selectors gebruikt in plaats van alleen classes en id's. Ik gebruik nu veel <code>nth-type-of()</code>. Ik had een <a href="https://flukeout.github.io/">spel</a> gespeeld waarmee je allemaal nieuwe selectors leerde kennen. Een paar die ik heb geleerd:</p>
             <h5>NTH of type selector met een formula</h5>
             <p>Een selector waarbij de formula alle elementen selecteerd vanaf een bepaalde plek. Bijvoorbeeld <code>:nth-of-type(An+b)</code></p>
             <h5>Attribute selector beginnend met charaters</h5>
@@ -139,6 +139,47 @@
             <h5>Wat heb ik geleerd?</h5>
             <p><code>@media screen</code> alleen voor schermen. <code>@media print</code> alleen voor print (bijvoorbeeld bij afdrukken) en <code>@media speech</code> voor screen readers.</p>
             <p>Maar in moderne CSS hoef je screen meestal niet meer te gebruiken, want browsers passen media queries standaard toe op schermen.</p>
+          </li>
+          <li>
+            <h4>Donderdag 11 september 2025</h4>
+            <p>Vandaag wilde ik verder werken met de <a href="https://learnjavascript.online/">learn javascript</a> lessen omdat ik daar beter in wil worden. Ik heb de chapter over strings gemaakt.</p>
+            <h5>Wat heb ik geleerd?</h5>
+            <p>Je kunt strings maken met " (dubbele aanhalingstekens) of ' (enkele aanhalingstekens).
+              Bijvoorbeeld: "Hallo" of 'Hallo'.
+            </p>
+              <p>
+                <code>.length</code>is een property die de lengte van een string geeft.
+                <code>"Hallo".length</code> geeft 5.
+              </p>
+                <p>
+                  <code>.toUpperCase()</code> is een functie die de string omzet naar hoofdletters.
+                  <code>"Hallo".toUpperCase()</code> wordt "HALLO".
+                </p>
+                  <p>
+                  <code>.toLowerCase() </code>is een functie die de string omzet naar kleine letters.
+                  <code>"HALLO".toLowerCase()</code> wordt "hallo".
+                </p>
+                <p>
+                  Haakjes () zijn verplicht bij functies (zoals <code>.toUpperCase()</code>),
+                  maar niet bij eigenschappen zoals <code>.length</code>, omdat die al vooraf berekend is.
+                </p>
+                <p>
+                  Vierkante haakjes [index] gebruik je om een specifiek character uit een string te halen. <code>"Hallo"[0]</code> geeft "H". De index <b>begint bij 0</b>.
+                </p>
+                <p>
+                  De <code>.at()</code> methode kun je ook gebruiken om een teken op een bepaalde index te lezen, en die kan ook negatieve waarden gebruiken. <code>"Hallo".at(-1)</code> geeft "o" (laatste teken).
+                </p>
+                <p>
+                  Een substring is een deel van een string. <code>string.substring(indexStart, indexEnd)</code> wordt gebruikt om een gedeelte van de string terug te geven. indexStart: het begin, indexEnd: het einde <code>"Hallo".substring(1, 4)</code> geeft "all". Het indexEnd argument is optioneel, dus je kunt het weglaten. <code>"Hallo".substring(2)</code> geeft "llo".
+                </p>
+                <p>
+                  De + operator wordt gebruikt om: twee getallen op te tellen, bijvoorbeeld 2 + 3 = 5 twee strings samen te voegen (concatenatie), bijvoorbeeld "Hi " + "daar" = "Hi daar".
+                </p>
+                <h5>Interpolatie</h5>
+                <p>
+                  Een template string maak je met backticks in plaats van aanhalingstekens.  `Hallo Wereld`. Template strings kunnen over meerdere regels gaan. Template strings ondersteunen interpolatie, wat betekent dat je variabelen erin kunt gebruiken met ${variablen}. Op de onderstaande foto zie je hoe ik interpolatie in een string gebruik. 
+                </p>
+            <img src="./assets/images/Sprint_1/Interpolation.png" alt="Interpolatie op Javascript">
           </li>
         </ul>
         <ul class="sprint">

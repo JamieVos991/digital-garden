@@ -1,7 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
     const knoppen = document.querySelectorAll("button[data-sprint]");
     const sprints = document.querySelectorAll(".sprint");
-    const footer = document.querySelector("footer");
+  
+    const details = document.querySelectorAll("details");
   
     knoppen.forEach((btn) => {
       btn.addEventListener("click", () => {
@@ -18,10 +19,9 @@ document.addEventListener("DOMContentLoaded", () => {
     if (sprints.length > 0) {
       sprints[0].classList.add("active");
     }
-
-    if (footer) {
-        sprints[index].appendChild(footer);
-      }
-      
+  
+    details.forEach((detail) => {
+      detail.open = true;
+    });
   });
   

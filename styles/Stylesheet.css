@@ -95,6 +95,43 @@ main {
         flex-direction: column;
         gap: 15px;
       }
+
+      details[open] summary .arrow {
+        transform: rotate(270deg);
+      }
+
+      details {
+        background: var(--main-kleur);
+
+        &:open summary .arrow {
+          transform: rotate(270deg);
+        }
+
+        summary {
+          list-style: none;
+          font-size: 1.05rem;
+          display: flex;
+          padding: 15px;
+          border-bottom: 1.5px solid var(--tertiary-kleur);
+          align-items: center;
+          justify-content: space-between;
+
+          .arrow {
+            display: inline-block;
+          }
+        }
+
+        div {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          padding: 15px;
+
+          a {
+            text-decoration: none;
+          }
+        }
+      }
     }
   }
 }

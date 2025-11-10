@@ -35,6 +35,17 @@ button {
   padding: 0 15px;
 }
 
+a {
+  color: var(--tertiary-kleur);
+  text-decoration: none;
+}
+
+code {
+  background: black;
+  padding: 5px;
+  display: inline-block;
+}
+
 .gif {
   width: 60px;
 }

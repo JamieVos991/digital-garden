@@ -34,12 +34,12 @@
                   </p>
                </li>
                <li>
-                  <button data-sprint="1">Sprint 1</button>
-                  <button data-sprint="2">Sprint 2</button>
-                  <button data-sprint="3">Sprint 3</button>
-                  <button data-sprint="4">Sprint 4</button>
-                  <button data-sprint="5">Handige Links</button>
-                  <button data-sprint="6">Digital Garden</button>
+                  <button data-sprint="1"><span>Sprint 1</span></button>
+                  <button data-sprint="2"><span>Sprint 2</span></button>
+                  <button data-sprint="3"><span>Sprint 3</span></button>
+                  <button data-sprint="4"><span>Sprint 4</span></button>
+                  <button data-sprint="5"><span>Handige Links</span></button>
+                  <button data-sprint="6"><span>Digital Garden</span></button>
                </li>
             </ul>
          </section>
@@ -301,6 +301,17 @@
               <li>
                 <h4>Vrijdag 26 september 2025</h4>
                 <p>Vandaag was er een code/design review maar ik was niet aanwezig.</p>
+              </li>
+              <li>
+                <h4>Maandag 29 september 2025</h4>
+                <p>Normal flow of Flow Layout is de manier waarop block- en inline elementen op een pagina worden weergegeven voordat er wijzigingen met CSS worden aangebracht.</p>
+                <p>Dat is wat je ziet als je “kale” HTML in de browser bekijkt, en als je gekleurde randen om verschillende elementen zou zetten. Elk element is een rechthoekige “box”. In Flow Layout staan block level boxen onder elkaar, en inline level boxen naast elkaar. Met CSS kun je met verschillende modes een layout kan maken.</p>
+                <img src="./assets/images/Sprint_2/flow-layout.png">
+                <h5>Layouts</h5>
+                <p>Flexbox: Ideaal voor 1 dimensionale layouts (rij of kolom).</p><p>CSS Grid: 2 dimensionele layout (rijen en kolommen). Heel goed met complexe pagina layouts. Kan complete templates definiëren</p>
+                <p>Floats: Ouderwetse methode, oorspronkelijk niet bedoeld voor layouts. Werd vroeger gebruikt voordat Flexbox/Grid bestonden. Nu vooral gebruikt voor tekst om afbeeldingen te laten “floaten”</p>
+                <p>Positionering: <code>static</code> (default) <code>absolute</code>, <code>relative</code>, <code>fixed</code>,<code>sticky</code> Niet bedoeld als hoofdlayout, maar nuttig voor exacte plaatsing en overlays</p>
+                <p>Multi-column layout: Handig voor magazine achtige kolommen met tekst met <code>display: masonry;</code></p>
               </li>
             </ul>
             <ul class="sprint">

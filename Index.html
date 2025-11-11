@@ -395,6 +395,34 @@
                   <p>Een goede toegankelijke website voldoet aan de <a href="https://www.w3.org/TR/WCAG22/">Web Content Accessibility Guidelines (WCAG)</a> van het W3C. <a href="https://www.a11yproject.com/">The A11Y Project</a> is een goede plek om te lezen over toegankelijkheid, daar staat ook een checklist waar een website aan moet voldoen, en waarmee je je eigen site kunt controleren.</p>
                   <p>Ik heb ook geleerd wat een lighthouse test is, die je in een Chrome browser kan uitvoeren. In de Devtools kun je Lighthouse gebruiken.</p>
                 </li>
+                <li>
+                  <h4>Dinsdag 14 oktokber</h4>
+                  <p>Vandaag had ik weer een CSS challenge, en een zeer interressante ook. Namelijk over kleur.</p>
+                  <img src="./assets/images/Sprint_3/kleur.png" alt="Kleur met Display-P3">
+                  <h5>RGB</h5>
+                  <p>RGB is vrij vernieuwd, in de oude versie gebruikte je namelijk: <code class="RGB-1-kleur">color: rgb(255, 0, 0);</code> met comma's. De nieuwe is: <code class="RGB-2-kleur">color: rgb(255 0 0 / .5);</code> (Optioneel met transparantie). Dit is om meer consistentie in te bregen, want andere color functies hoeven dat ook niet.</p>
+                  <h5>HSL</h5>
+                  <p>HSL staat voor: Hue Saturation Lightness. Voor designers en developers is HSL prettig omdat je kleuren makkelijk kunt aanpassen. Wil je een kleur donkerder? → verlaag lightness. Wil je minder felle kleuren? → verlaag saturation. Wil je een andere tint? → verander hue
+                In CSS wordt dat bijvoorbeeld zo gebruikt: <code class="HSL-kleur">color: hsl(270deg 100% 50%);</code></p>  
+                  <img src="./assets/images/Sprint_3/HSL.png" alt="HSL image">
+                  <img src="./assets/images/Sprint_3/hsl-2.png" alt="HSL image">
+                    <h5>HEX</h5>
+                    <p>Een hex kleur begint altijd met een # en bestaat uit 6 cijfers/letters (soms 3). Bijvoorbeeld:<code class="HEX-kleur">color: #FF5733;</code> De FF staat voor red, 57 voor green en 33 voor blue. Je zou ook transparantie kunnen toevoegen, dit doe je met een waarde van 2 cijfers of letters. Bijvoorbeeld: <code class="HEX-2-kleur">color: #FF573366</code>. 00 → 0, 33 → 0.2, 66 → 0.4, 99 → 0.6, CC → 0.8 en FF → 1.</p>
+                    <img src="./assets/images/Sprint_3/Nieuwe-kleuren.png" alt="Van oude naar nieuwe kleuren codes">
+                    <h5>Display-P3</h5>
+                    <p>Display-P3 is een kleurprofiel dat steeds belangrijker wordt in moderne schermen en webdesign. Het is ontwikkeld door Apple, gebaseerd op de traditionele DCI-P3 (gebruikt in digitale cinema), maar aangepast voor beeldschermen. Display-P3 kan veel meer kleuren weergeven dan RGB</p>
+                    <p>Dit is een kleur met standaard RGB syntrax<code class="RGB-green">color: rgb(0 1 0);</code> en dit is een display-p3 syntrax: <code class="displayP3-kleur">color: color(display-p3 0 1 0);</code>. Er is een duidelijk verschil.</p>
+                    <h5>oKLCH</h5>
+                    <p>oKLCH staat voor: Oklab (basis), K (geen echte betekenis, gebruikt als prefix), L (lightness), C (chroma) H (hue). Het is is een moderne, perceptueel uniforme kleurruimte die ontworpen is om kleuren op een manier te beschrijven die veel beter aansluit bij hoe mensen kleur zien en ervaren. Het wordt steeds populairder in o.a. webdesign en CSS-color-level 4.</p>
+                    <p>Je kan dit schrijven op bijvoorbeeld deze manier: <code class="oklch-kleur">color: oklch(0.6426 0.2426 25.67);</code></p>
+                    <img src="./assets/images/Sprint_3/Mooie-kleuren.png">
+                    <h5>Gradients</h5>
+                    <img src="./assets/images/Sprint_3/Gradients.png">
+                    <p>In RGB of HSL krijgen gradients vaak een modderige of grijze middenkleur omdat de helderheid niet gelijkmatig verloopt.
+                      OKLCH is ontworpen zodat “lichtheid” overeenkomt met wat je oog als licht/donker ervaart.</p>
+                    <img src="./assets/images/Sprint_3/rgb-hsl.png">
+                    <p>Dit kan je implenmenteren met: <code>background-image: linear-gradient(90deg in okLCH, orange, pink);</code></p>
+                  </li>
             </ul>
             <ul class="sprint">
                <h3>Sprint 4</h3>
@@ -910,11 +938,12 @@
                <h3>Digital Garden</h3>
                <li>
                 <p>Display-P3 project</p>
-                <p class="codepen" data-height="300" data-theme-id="dark" data-default-tab="result" data-slug-hash="XJdJNZP" data-pen-title="Untitled" data-preview="true" data-user="JamieVos991" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                <p class="codepen" data-height="300" data-theme-id="dark" data-default-tab="result" data-slug-hash="XJdJNZP" data-pen-title="Display-p3" data-preview="true" data-user="JamieVos991" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
                   <span>See the Pen <a href="https://codepen.io/JamieVos991/pen/XJdJNZP">
-              Untitled</a> by Jamie (<a href="https://codepen.io/JamieVos991">@JamieVos991</a>)
+              Display-p3</a> by Jamie (<a href="https://codepen.io/JamieVos991">@JamieVos991</a>)
               on <a href="https://codepen.io">CodePen</a>.</span>
                   </p>
+            
                </li>
             </ul>
          </section>

@@ -58,3 +58,35 @@ code {
 .gif {
   width: 60px;
 }
+
+.HEX-kleur {
+  color: #ff5733;
+}
+
+.RGB-1-kleur {
+  color: rgb(255, 0, 0);
+}
+
+.RGB-2-kleur {
+  color: rgb(255 0 0 / 0.5);
+}
+
+.RGB-green {
+  color: rgb(0, 255, 0);
+}
+
+.displayP3-kleur {
+  color: color(display-p3 0 1 0);
+}
+
+.HSL-kleur {
+  color: hsl(270deg 100%, 50%);
+}
+
+.HEX-2-kleur {
+  color: #ff5733cc;
+}
+
+.oklch-kleur {
+  color: oklch(0.6426 0.2426 25.67);
+}

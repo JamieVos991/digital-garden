@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Viking font</title>
+    <style>
+      body {
+        background: black;
+        color: red;
+        line-height: 1.4;
+
+        p:nth-of-type(1) {
+          grid-column: 2;
+        }
+
+        .viking-p {
+          font-family: Viking, sans-serif;
+          font-size: 200%;
+        }
+
+        section {
+          grid-column: 2;
+        }
+      }
+
+      @font-face {
+        font-family: "Viking";
+        src: url("./Vikingfont-Regular.otf"), url(".otf") format("opentype");
+      }
+
+      .CM {
+        max-width: 12cm;
+      }
+
+      .MM {
+        max-width: 130mm;
+      }
+
+      .QM {
+        max-width: 450Q;
+      }
+
+      .I {
+        max-width: 4.5in;
+      }
+
+      .PI {
+        max-width: 24pc;
+      }
+
+      .PO {
+        max-width: 300pt;
+      }
+
+      .PX {
+        max-width: 400px;
+      }
+
+      .PX-mono {
+        max-width: 400px;
+        font-family: monospace;
+      }
+
+      .EM {
+        max-width: 25em;
+      }
+
+      .REM {
+        max-width: 30rem;
+      }
+
+      .REM-mono {
+        max-width: 30rem;
+        font-family: monospace;
+      }
+
+      .EX {
+        max-width: 60ex;
+      }
+
+      .CH {
+        max-width: 50ch;
+      }
+
+      .LH {
+        max-width: 20lh;
+      }
+
+      .VW {
+        max-width: 50vw;
+      }
+
+      .VMIN {
+        max-width: 55vmin;
+      }
+
+      .CQW {
+        max-width: 50cqw;
+      }
+
+      .CQMIN {
+        max-width: 50cqmin;
+      }
+
+      .CQMAX {
+        max-width: 50cqmax;
+      }
+
+      #info {
+        color: yellow !important;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="viking-p">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint est soluta
+      sed hic beatae consequatur et neque, numquam eos nemo quidem aliquid
+      veniam incidunt ad iste placeat veritatis laboriosam tempore. Lorem ipsum
+    </p>
+
+    <section>
+      <p id="info"></p>
+
+      <div>
+        <h2>Absolute Lenght Units</h2>
+        <button id="centimeter-btn">Centimeters</button>
+        <button id="milimeter-btn">Milimeters</button>
+        <button id="quatermilimeter-btn">Quater-milimeters</button>
+        <button id="inches-btn">Inches</button>
+        <button id="picas-btn">Picas</button>
+        <button id="points-btn">Points</button>
+        <button id="px-btn">Pixels</button>
+        <button id="pxmono-btn">Pixels met Monospace</button>
+      </div>
+      <div>
+        <h2>Font relative length units</h2>
+        <button id="em-btn">EM</button>
+        <button id="rem-btn">REM</button>
+        <button id="remmono-btn">REM met Monospace</button>
+        <button id="ex-btn">EX</button>
+        <button id="ch-btn">CH</button>
+        <button id="lh-btn">LH</button>
+      </div>
+      <div>
+        <h2>Viewport relative units</h2>
+        <button id="vw-btn">VW</button>
+        <button id="vmin-btn">VMIN</button>
+      </div>
+      <div>
+        <h2>Container units</h2>
+        <button id="cqw-btn">CQW</button>
+        <button id="cqmin-btn">CQMIN</button>
+        <button id="cqmax-btn">CQMAX</button>
+      </div>
+      <blockquote cite="http://webtypography.net/2.1.2">
+        <p id="max-p">
+          Anything from 45 to 75 characters is widely regarded as a satisfactory
+          line length for a single-column page set in a serifed text face in a
+          text size. The 66-character line (counting both letters and spaces) is
+          widely regarded as ideal. For multiple column work, a better average
+          is 40 to 50 characters.
+        </p>
+      </blockquote>
+      <p>—Robert Bringhurst</p>
+    </section>
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const info = document.getElementById("info");
+      const p = document.getElementById("max-p");
+
+      const buttons = [
+        {
+          id: "centimeter-btn",
+          class: "CM",
+          tekst: "12 centimeter = 453 pixels",
+        },
+        {
+          id: "milimeter-btn",
+          class: "MM",
+          tekst: "130 millimeter = 491 pixels",
+        },
+        {
+          id: "quatermilimeter-btn",
+          class: "QM",
+          tekst: "450 quarter millimeters = 425 pixels",
+        },
+        {
+          id: "inches-btn",
+          class: "I",
+          tekst: "4.5 inches = 432 pixels",
+        },
+        {
+          id: "picas-btn",
+          class: "PI",
+          tekst: "24 picas = 382 pixels",
+        },
+        {
+          id: "points-btn",
+          class: "PO",
+          tekst: "300 points = 400 pixels",
+        },
+        {
+          id: "px-btn",
+          class: "PX",
+          tekst: "400 pixels",
+        },
+        {
+          id: "pxmono-btn",
+          class: "PX-mono",
+          tekst: "400 pixels met monospace",
+        },
+        {
+          id: "em-btn",
+          class: "EM",
+          tekst: "max-width: 25em;",
+        },
+        {
+          id: "rem-btn",
+          class: "REM",
+          tekst: "max-width: 30rem;",
+        },
+        {
+          id: "remmono-btn",
+          class: "REM-mono",
+          tekst: "max-width: 30rem;",
+        },
+        {
+          id: "ex-btn",
+          class: "EX",
+          tekst: "max-width: 60ex;",
+        },
+        {
+          id: "ch-btn",
+          class: "CH",
+          tekst: "max-width: 50ch;",
+        },
+        {
+          id: "lh-btn",
+          class: "LH",
+          tekst: "max-width: 20lh;",
+        },
+        {
+          id: "vw-btn",
+          class: "VW",
+          tekst: "max-width: 50vw;",
+        },
+        {
+          id: "vmin-btn",
+          class: "VMIN",
+          tekst: "max-width: 55vmin;",
+        },
+        {
+          id: "cqw-btn",
+          class: "CQW",
+          tekst: "max-width: 50cqw;",
+        },
+        {
+          id: "cqmin-btn",
+          class: "CQMIN",
+          tekst: "max-width: 50cqmin;",
+        },
+        {
+          id: "cqmax-btn",
+          class: "CQMAX",
+          tekst: "max-width: 50cqmax;",
+        },
+      ];
+
+      buttons.forEach(({ id, class: className, tekst }) => {
+        document.getElementById(id).addEventListener("click", () => {
+          p.className = className;
+          info.textContent = tekst;
+        });
+      });
+    });
+  </script>
+</html>

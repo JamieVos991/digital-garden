@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inputs</title>
+    <link rel="stylesheet" href="./inputs.css" />
+    <link rel="stylesheet" href="./stylesheet.css" />
+  </head>
+  <body class="class-font-family">
+    <main>
+      <ul>
+        <li>
+          <h1 class="class-font-heading-h1">HTML Input Types en Attributen</h1>
+        </li>
+        <li>
+          <p>
+            Inputs in HTML zijn elementen waarmee een gebruiker gegevens kan
+            invoeren in een formulier. Ze worden gemaakt met het input element
+            en kunnen verschillende types hebben, zoals tekstvelden, checkboxen,
+            radio-buttons, knoppen, datums, wachtwoorden en meer. Volgens
+            <a href="https://www.w3schools.com/html/html_form_input_types.asp"
+              >W3Schools</a
+            >
+            zijn er 22 officiele inputs.
+          </p>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <h2 class="class-font-heading-h2">Attributen</h2>
+          <p>
+            Voordat ik de type inputs laat zien, is het ook belangrijk om te
+            weten wat attributen zijn, wat ze doen, en op welke types je deze
+            kan gebruiken.
+          </p>
+        </li>
+        <li>
+          <h3 class="class-font-heading-h3">Globale attributen</h3>
+          <p>
+            Globale attributen zijn HTML attributen die je op elk HTML element
+            kunt gebruiken, dus ook op alle inputs.
+          </p>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <h4 class="class-font-heading-h4">ID attribuut</h4>
+          <p>
+            <code>id</code> Het id attribuut is een unieke identificatie dat je
+            op elk HTML element kunt gebruiken. Het mag maar één keer per pagina
+            voorkomen en wordt vooral gebruikt om elementen te koppelen aan CSS,
+            JavaScript of een label in formulieren. Hierdoor kun je een element
+            eenvoudig selecteren of stylen, en weet een label precies met welke
+            input het verbonden is.
+          </p>
+          <h5 class="class-font-heading-h5">Waardes</h5>
+          <p>
+            Je mag zelf bepalen welke waarde je gebruikt, zolang er geen spaties
+            in zitten, het niet met een cijfer begint, en het maar één keer
+            voorkomt op de pagina.
+          </p>
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/id"
+            >MDN: id attribute</a
+          >
+        </li>
+        <li>
+          <h4 class="class-font-heading-h4">Class attribuut</h4>
+          <p>
+            <code>class</code> Het class attribuut gebruik je om een element één
+            of meerdere classnamen te geven, zodat je het kunt groeperen voor
+            styling in CSS of selectie in javascript. In tegenstelling tot id
+            mag een class meerdere keren voorkomen op dezelfde pagina en kan een
+            element ook meerdere classes tegelijk hebben. Dit maakt het ideaal
+            om herbruikbare stijlen toe te passen.
+          </p>
+          <h5 class="class-font-heading-h5">Waardes</h5>
+          <p>
+            Een class mag meerdere classnamen bevatten, gescheiden door spaties,
+            en mag ook met een cijfer beginnen (in tegenstelling tot id). Binnen
+            één classnaam mogen alleen geen spaties staan.
+          </p>
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/class"
+            >MDN: class attribute</a
+          >
+        </li>
+        <li>
+          <h4 class="class-font-heading-h4">Style attribuut</h4>
+          <p>
+            <code>style</code> Het style attribuut gebruik je om inline CSS toe
+            te voegen aan een HTML element. Hiermee kun je direct stijlen
+            toepassen, zoals kleuren, marges, groottes of lettertypes. Het is
+            handig voor snelle, kleine aanpassingen, maar minder geschikt voor
+            grote projecten omdat stijlen dan moeilijker te onderhouden zijn.
+          </p>
+          <h5 class="class-font-heading-h5">Waardes</h5>
+          <p>
+            De waarde van het style attribuut is een CSS regel of meerdere CSS
+            regels die je direct op het element zet.
+          </p>
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/style"
+            >MDN: style attribute</a
+          >
+        </li>
+        <li>
+          <h4 class="class-font-heading-h4">Title attribuut</h4>
+          <p>
+            <code>title</code> Het title attribuut geeft extra informatie over
+            een element in de vorm van een tooltip. Wanneer je met je muis over
+            het element hovert, toont de browser deze tekst. Het wordt vaak
+            gebruikt om verduidelijking, uitleg of hints te geven aan de
+            gebruiker.
+          </p>
+          <h5 class="class-font-heading-h5">Waardes</h5>
+          <p>
+            Bevat een korte uitleg of extra informatie over een element. De
+            waarde is gewoon tekst.
+          </p>
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/title"
+            >MDN: title attribute</a
+          >
+        </li>
+        <li>
+          <h4 class="class-font-heading-h4">Lang attribuut</h4>
+          <p>
+            <code>lang</code> Het lang attribuut geeft aan in welke taal de
+            inhoud van een element geschreven is. Browsers, zoekmachines en
+            schermlezers gebruiken dit om tekst correct uit te spreken of te
+            tonen. Het wordt meestal op het HTML element gezet, maar je kunt het
+            ook op losse elementen gebruiken wanneer een stukje tekst in een
+            andere taal is.
+          </p>
+          <h5 class="class-font-heading-h5">Waardes</h5>
+          <p>
+            De waarde van het lang attribuut is altijd een ISO (International
+            Organization for Standardization) taal code. Zoals <i>nl</i> en
+            <i>en</i>. Je zou ook subtalen/dialecten kunnen koppelen met een
+            streepje. Bijvoorbeeld: <i>en-US</i> (Engels Verenigde staten) en
+            <i>en-GB</i> (Engels Verenigd Kroninkrijk). Of
+            <i>pt-BR</i> (Portugees Brazilie) en <i>pt-PT</i> (Portugees
+            Portugal).
+          </p>
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/lang"
+            >MDN: lang attribute</a
+          >
+        </li>
+        <li>
+          <h4 class="class-font-heading-h4">Dir attribuut</h4>
+          <p>
+            <code>dir</code> Het dir attribuut bepaalt de textdirection van de
+            inhoud binnen een HTML element. Dit is vooral belangrijk voor talen
+            die rechts naar links gelezen worden, zoals Arabisch of Hebreeuws.
+          </p>
+          <h5 class="class-font-heading-h5">Waardes</h5>
+          <p>
+            Dir kan drie waardes hebben: <i>ltr</i>, <i>rtl</i>, en <i>auto</i>.
+            Ze bepalen of tekst links naar rechts, rechts naar links, of
+            automatisch gedetecteerd wordt.
+          </p>
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/dir"
+            >MDN: dir attribute</a
+          >
+        </li>
+        <li>
+          <h4 class="class-font-heading-h4">Hidden attribuut</h4>
+          <p>
+            <code>hidden</code> Het hidden attribuut maakt een HTML element
+            onzichtbaar op de pagina. Het element blijft in de DOM aanwezig,
+            maar wordt niet weergegeven en neemt geen ruimte in beslag. Het is
+            handig voor content die je tijdelijk wilt verbergen zonder het te
+            verwijderen uit de HTML.
+          </p>
+          <h5 class="class-font-heading-h5">Waardes</h5>
+          <p>
+            Het hidden attribuut is een boolean attribuut. Dat betekent dat het
+            geen specifieke waarde nodig heeft. De aanwezigheid van het
+            attribuut maakt het element verborgen.
+          </p>
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/hidden"
+            >MDN: hidden attribute</a
+          >
+        </li>
+        <li>
+          <h4 class="class-font-heading-h4">Tabindex attribuut</h4>
+          <p>
+            <code>tabindex</code> Het tabindex attribuut bepaalt de volgorde van
+            focus wanneer een gebruiker door de pagina navigeert met de tab
+            toets. Hiermee kun je bepalen welke elementen eerst, later of
+            helemaal niet gefocust kunnen worden.
+          </p>
+          <h5 class="class-font-heading-h5">Waardes</h5>
+          <p>
+            0 maakt het element focusbaar in de normale volgorde van de pagina.
+            Een positief getal geeft een aangepaste volgorde, waarbij elementen
+            met een lagere waarde eerst focus krijgen. -1 zorgt ervoor dat het
+            element niet via tab kan worden gefocust, maar het kan nog wel
+            gefocust worden met JavaScript of een muisklik.
+          </p>
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex"
+            >MDN: tabindex</a
+          >
+        </li>
+        <li>
+          <h4 class="class-font-heading-h4">Draggable attribuut</h4>
+          <p>
+            <code>draggable</code> Het draggable attribuut bepaalt of een HTML
+            element gesleept kan worden met drag-and-drop functionaliteit.
+          </p>
+          <h5 class="class-font-heading-h5">Waardes</h5>
+          <p>
+            Met draggable bepaal je of een element drag-and-drop interactie
+            ondersteunt (true), of niet (false), of dat het standaardgedrag
+            geldt (afhankelijk van het element).
+          </p>
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API#draggable_attribute"
+            >MDN: draggable</a
+          >
+        </li>
+        <li>
+          <h4 class="class-font-heading-h4">Contenteditable attribuut</h4>
+          <p>
+            <code>contenteditable</code> Het contenteditable attribuut maakt een
+            HTML element bewerkbaar door de gebruiker. Als je dit attribuut
+            toevoegt, kan de gebruiker de tekst in het element direct aanpassen
+            in de browser, zonder dat er een input of textarea nodig is.
+          </p>
+          <h5 class="class-font-heading-h5">Waardes</h5>
+          <p>
+            Contenteditable maakt een element bewerkbaar of alleen lezen,
+            afhankelijk van de waarde true of false.
+          </p>
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable"
+            >MDN: contenteditable</a
+          >
+        </li>
+        <li>
+          <h4 class="class-font-heading-h4">Spellcheck attribuut</h4>
+          <p>
+            <code>spellcheck</code> Het spellcheck attribuut bepaalt of de
+            browser spelling en grammaticacontrole moet uitvoeren op de inhoud
+            van een element. Het is vooral nuttig bij tekst velden zoals input
+            en textarea om gebruikers te helpen fouten te vermijden.
+          </p>
+          <h5 class="class-font-heading-h5">Waardes</h5>
+          <p>
+            Deze kan drie vormen hebben: met <i>spellcheck="true"</i> staat
+            spellingcontrole aan, met <i>spellcheck="false"</i> staat het uit,
+            en wanneer je het attribuut helemaal weglaat bepaalt de browser zelf
+            of spellcheck wordt ingeschakeld, afhankelijk van het element en de
+            instellingen.
+          </p>
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/spellcheck"
+            >MDN: spellcheck</a
+          >
+        </li>
+        <li>
+          <h4 class="class-font-heading-h4">Translate attribuut</h4>
+          <p>
+            <code>translate</code> Het translate attribuut bepaalt of de inhoud
+            van een HTML element door automatische vertaaldiensten (zoals Google
+            Translate) vertaald mag worden. yes: de inhoud mag vertaald worden
+            (standaard) en no: de inhoud mag niet vertaald worden.
+          </p>
+          <h5 class="class-font-heading-h5">Waardes</h5>
+          <p>
+            Je geeft aan of de tekst door automatische vertaaldiensten moet
+            worden meegenomen <i>(yes)</i> of juist niet <i>(no)</i>.
+          </p>
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/translate"
+            >MDN: translate</a
+          >
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <h3 class="class-font-heading-h3">Input attributen</h3>
+          <p>
+            Input attributen zijn speciale attributen die je aan een input
+            element kunt meegeven om het gedrag, de invoerbeperkingen en het
+            uiterlijk van het input te regelen. Ze maken het mogelijk om
+            bijvoorbeeld te bepalen welk type gegevens de gebruiker kan
+            invoeren, of een veld verplicht is, of er een standaardwaarde staat,
+            en nog veel meer. Deze attributen werken alleen op inputs en soms op
+            een textarea en button.
+          </p>
+        </li>
+        <li>
+          <h4 class="class-font-heading-h4">Type attribuut</h4>
+          <p>
+            <code>type</code> Het type attribuut van een input element zegt
+            eigenlijk wat voor soort invoerveld het is en hoe het zich gedraagt.
+            Afhankelijk van de waarde van type weet de browser bijvoorbeeld dat
+            het een gewoon tekstveld moet laten zien, een wachtwoordveld, een
+            knop, of een datumkiezer etc.
+          </p>
+          <h5 class="class-font-heading-h5">Waardes</h5>
+          <p>
+            Tekst: <i>text, password, search, tel, url </i>en<i> email.</i>
+            Numeriek:
+            <i>number, range, date, datetime-local, month, week </i>en<i>
+              time.</i
+            >
+            Keuzevelden: <i>checkbox, radio, file </i>en<i> color.</i> Knoppen:
+            <i>button, submit, reset </i>en<i> image.</i> en <i>hidden.</i>
+          </p>
+        </li>
+        <li>
+          <h4 class="class-font-heading-h4">Name attribuut</h4>
+          <p>
+            <code>name</code> Het name attribuut bij een input geeft het
+            “naamlabel” van het veld aan. Dit is belangrijk wanneer je een
+            formulier verstuurt, want de browser gebruikt de name om te weten
+            welke waarde bij welk veld hoort.
+          </p>
+          <h5 class="class-font-heading-h5">Waardes</h5>
+          <p>
+            Dit kan vrij gekozen tekst bevatten, zolang het maar een geldige
+            HTML naam is. Mag letters, cijfers, underscores(_) en streepjes(-)
+            bevatten.
+          </p>
+        </li>
+        <li>
+          <h4 class="class-font-heading-h4">Value attribuut</h4>
+          <p>
+            <code>value</code> Het value attribuut van een input bepaalt wat er
+            standaard in het beld staat of welke waarde wordt verstuurd als het
+            formulier wordt ingediend.
+          </p>
+          <h5 class="class-font-heading-h5">Waardes</h5>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. At atque
+            accusamus, quas aut in harum quisquam dolore quos, veniam eum iste,
+            magnam dolorum deserunt possimus maiores inventore autem neque
+            molestiae.
+          </p>
+        </li>
+        <li>
+          <h4 class="class-font-heading-h4">Placeholder attribuut</h4>
+          <p>
+            <code>placeholder</code> Het placeholder attribuut bij een input
+            geeft een voorbeeldtekst of hint weer in een input voordat de
+            gebruiker iets typt. Het is een visueel iets om de gebruiker te
+            laten weten wat voor soort informatie de gebruiker in het veld moet
+            invullen, bijvoorbeeld een naam, e-mailadres of telefoonnummer.
+          </p>
+          <h5 class="class-font-heading-h5">Waardes</h5>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
+            magnam officia minima culpa, enim pariatur tempore quisquam corporis
+            libero saepe atque blanditiis, quae cupiditate, a eius veritatis
+            alias rem molestiae.
+          </p>
+        </li>
+        <li>
+          <h4 class="class-font-heading-h4">Required attribuut</h4>
+          <p>
+            <code>required</code> Het required attribuut zorgt ervoor dat een
+            input veld verplicht ingevuld moet worden voordat een formulier kan
+            worden verzonden. Als de gebruiker probeert het formulier te
+            versturen zonder iets in dit veld in te vullen, geeft de browser
+            automatisch een foutmelding.
+          </p>
+          <h5 class="class-font-heading-h5">Waardes</h5>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+            ullam expedita laboriosam culpa enim amet autem delectus. Impedit
+            fugit, ut culpa aut perspiciatis nulla doloribus nihil quisquam
+            minus voluptatibus? Quia?
+          </p>
+        </li>
+        <li>
+          <h4 class="class-font-heading-h4">Disabled attribuut</h4>
+          <p>
+            <code>disabled</code> Het disabled attribuut maakt een input veld
+            niet interactief. De gebruiker kan er niets in typen of selecteren,
+            en het veld wordt vaak visueel grijs gemaakt door de browser.
+          </p>
+          <h5 class="class-font-heading-h5">Waardes</h5>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas
+            ad voluptatibus possimus vel consequatur sequi dolore, pariatur
+            molestias asperiores! Temporibus, eius cupiditate? Sequi adipisci
+            tenetur consequuntur nihil officiis eaque porro.
+          </p>
+        </li>
+        <li>
+          <h4 class="class-font-heading-h4">Readonly attribuut</h4>
+          <p>
+            <code>readonly</code> Het readonly attribuut maakt een input veld
+            alleen lezen. De gebruiker kan de inhoud zien en eventueel
+            selecteren, maar niet aanpassen. In tegenstelling tot disabled wordt
+            de waarde van een readonly veld wel verzonden met het formulier.
+          </p>
+          <h5 class="class-font-heading-h5">Waardes</h5>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi,
+            adipisci rerum iste reiciendis necessitatibus, iusto fugit harum
+            enim blanditiis impedit aut commodi ratione sunt saepe vero ex nobis
+            alias iure.
+          </p>
+        </li>
+        <li>
+          <h4 class="class-font-heading-h4">Min / Max attribuut</h4>
+          <p>
+            <code>min / max</code> De min en max attributen bij een input
+            element stellen de minimum- en maximumwaarde in die een gebruiker
+            mag invoeren. Ze worden vooral gebruikt bij inputtypes zoals number,
+            range, date, datetime-local, month, time en week. Bijvoorbeeld een
+            gebruiker mag alleen een tijd kiezen tussen 06:00 en 18:00 bij de
+            time input.
+          </p>
+          <h5 class="class-font-heading-h5">Waardes</h5>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
+            ratione officia odit, debitis accusamus et veniam! Voluptate
+            voluptates molestiae similique itaque neque. Fugit ipsum obcaecati
+            commodi saepe. Repellat, animi est.
+          </p>
+        </li>
+        <li>
+          <h4 class="class-font-heading-h4">Minlength / Maxlength attribuut</h4>
+          <p>
+            <code>minlength / maxlength</code> De minlength en maxlength
+            attributen bij een input element geven aan hoeveel tekens een
+            gebruiker minimaal of maximaal mag invoeren. Ze worden meestal
+            gebruikt bij tekstvelden zoals text, password, email, etc.
+          </p>
+          <h5 class="class-font-heading-h5">Waardes</h5>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque esse
+            debitis modi, corrupti quo eos ad ratione asperiores laboriosam
+            velit dolor a aliquid praesentium. Id debitis expedita corporis
+            tempore cumque.
+          </p>
+        </li>
+        <li>
+          <h4 class="class-font-heading-h4">Step attribuut</h4>
+          <p>
+            <code>step</code> Het step attribuut bij een input bepaalt de
+            stapgrootte voor invoervelden met een nummer- of datumwaarde, zoals
+            number, range, date, datetime-local, month of time. Het geeft aan
+            hoeveel je omhoog of omlaag kunt gaan met pijltjes of schuifbalken.
+            Het bepaalt in welke stapjes de waarde kan veranderen, zodat invoer
+            makkelijker en consistenter wordt.
+          </p>
+          <h5 class="class-font-heading-h5">Waardes</h5>
+          <p>
+            De waarde van dit attribuut is een een getal of speciale waarde die
+            bepaalt hoe groot de stappen zijn waarmee de gebruiker een waarde
+            kan verhogen of verlagen. Je kan ook als waarde <i>any</i> meegeven,
+            dit betekent dat je alle waardes zoals komma getallen kan invoeren
+            in een input. Decimalen worden namelijk niet altijd geaccepteerd
+            door de browser validatie. De browser gebruikt namelijk altijd
+            standaard een stap van 1.
+          </p>
+        </li>
+        <li>
+          <h4 class="class-font-heading-h4">Autocomplete attribuut</h4>
+          <p>
+            <code>autocomplete</code> Het autocomplete attribuut bij een input
+            vertelt de browser of het veld automatisch ingevuld mag worden met
+            eerder ingevoerde waarden of gegevens die opgeslagen zijn. Handig
+            bij formulieren zoals e-mail, adres of creditcard, zodat gebruikers
+            sneller kunnen invullen.
+          </p>
+          <h5 class="class-font-heading-h5">Waardes</h5>
+          <p>
+            <i>on</i>: de browser mag automatisch suggesties geven of invullen.
+            <i>off</i>: de browser mag geen automatische invulling doen.
+          </p>
+        </li>
+        <li>
+          <h4 class="class-font-heading-h4">Autofocus attribuut</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit hic
+            facere impedit sapiente magni. Non quis ea debitis velit, rem quia
+            expedita dicta eligendi obcaecati dolorem eaque placeat ducimus
+            inventore.
+          </p>
+          <h5 class="class-font-heading-h5">Waardes</h5>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste iure
+            excepturi sit natus obcaecati modi impedit nemo consequuntur numquam
+            omnis ut quasi ex perferendis atque voluptatum libero, quidem quam
+            debitis.
+          </p>
+        </li>
+        <li>
+          <h4 class="class-font-heading-h4">Pattern attribuut</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Id ipsa
+            pariatur suscipit officiis maxime quia necessitatibus cum modi!
+            Incidunt consequatur nemo consectetur autem maxime vel minus ullam
+            excepturi facilis obcaecati!
+          </p>
+          <h5 class="class-font-heading-h5">Waardes</h5>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam,
+            praesentium. Itaque, sunt, voluptas natus molestiae placeat dicta
+            dolores numquam reiciendis vero officiis rerum rem laborum magni
+            voluptatibus, incidunt sapiente ex?
+          </p>
+        </li>
+        <li>
+          <h4 class="class-font-heading-h4">Form attribuut</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta ea
+            molestiae commodi aut laboriosam cumque repellendus veniam minima.
+            Adipisci tenetur facilis beatae odit repudiandae odio illum vero.
+            Voluptates, perferendis ut.
+          </p>
+          <h5 class="class-font-heading-h5">Waardes</h5>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta ea
+            molestiae commodi aut laboriosam cumque repellendus veniam minima.
+            Adipisci tenetur facilis beatae odit repudiandae odio illum vero.
+            Voluptates, perferendis ut.
+          </p>
+        </li>
+        <li>
+          <h4 class="class-font-heading-h4">Formaction attribuut</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta ea
+            molestiae commodi aut laboriosam cumque repellendus veniam minima.
+            Adipisci tenetur facilis beatae odit repudiandae odio illum vero.
+            Voluptates, perferendis ut.
+          </p>
+          <h5 class="class-font-heading-h5">Waardes</h5>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta ea
+            molestiae commodi aut laboriosam cumque repellendus veniam minima.
+            Adipisci tenetur facilis beatae odit repudiandae odio illum vero.
+            Voluptates, perferendis ut.
+          </p>
+        </li>
+        <li>
+          <h4 class="class-font-heading-h4">Formenctype attribuut</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta ea
+            molestiae commodi aut laboriosam cumque repellendus veniam minima.
+            Adipisci tenetur facilis beatae odit repudiandae odio illum vero.
+            Voluptates, perferendis ut.
+          </p>
+          <h5 class="class-font-heading-h5">Waardes</h5>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta ea
+            molestiae commodi aut laboriosam cumque repellendus veniam minima.
+            Adipisci tenetur facilis beatae odit repudiandae odio illum vero.
+            Voluptates, perferendis ut.
+          </p>
+        </li>
+        <li>
+          <h4 class="class-font-heading-h4">Formmethod attribuut</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta ea
+            molestiae commodi aut laboriosam cumque repellendus veniam minima.
+            Adipisci tenetur facilis beatae odit repudiandae odio illum vero.
+            Voluptates, perferendis ut.
+          </p>
+          <h5 class="class-font-heading-h5">Waardes</h5>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta ea
+            molestiae commodi aut laboriosam cumque repellendus veniam minima.
+            Adipisci tenetur facilis beatae odit repudiandae odio illum vero.
+            Voluptates, perferendis ut.
+          </p>
+        </li>
+        <li>
+          <h4 class="class-font-heading-h4">Formnovalidate attribuut</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta ea
+            molestiae commodi aut laboriosam cumque repellendus veniam minima.
+            Adipisci tenetur facilis beatae odit repudiandae odio illum vero.
+            Voluptates, perferendis ut.
+          </p>
+          <h5 class="class-font-heading-h5">Waardes</h5>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta ea
+            molestiae commodi aut laboriosam cumque repellendus veniam minima.
+            Adipisci tenetur facilis beatae odit repudiandae odio illum vero.
+            Voluptates, perferendis ut.
+          </p>
+        </li>
+        <li>
+          <h4 class="class-font-heading-h4">Formtarget attribuut</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta ea
+            molestiae commodi aut laboriosam cumque repellendus veniam minima.
+            Adipisci tenetur facilis beatae odit repudiandae odio illum vero.
+            Voluptates, perferendis ut.
+          </p>
+          <h5 class="class-font-heading-h5">Waardes</h5>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta ea
+            molestiae commodi aut laboriosam cumque repellendus veniam minima.
+            Adipisci tenetur facilis beatae odit repudiandae odio illum vero.
+            Voluptates, perferendis ut.
+          </p>
+        </li>
+        <li>
+          <h4 class="class-font-heading-h4">Inputmode attribuut</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta ea
+            molestiae commodi aut laboriosam cumque repellendus veniam minima.
+            Adipisci tenetur facilis beatae odit repudiandae odio illum vero.
+            Voluptates, perferendis ut.
+          </p>
+          <h5 class="class-font-heading-h5">Waardes</h5>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta ea
+            molestiae commodi aut laboriosam cumque repellendus veniam minima.
+            Adipisci tenetur facilis beatae odit repudiandae odio illum vero.
+            Voluptates, perferendis ut.
+          </p>
+        </li>
+        <li>
+          <h4 class="class-font-heading-h4">List attribuut</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta ea
+            molestiae commodi aut laboriosam cumque repellendus veniam minima.
+            Adipisci tenetur facilis beatae odit repudiandae odio illum vero.
+            Voluptates, perferendis ut.
+          </p>
+          <h5 class="class-font-heading-h5">Waardes</h5>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta ea
+            molestiae commodi aut laboriosam cumque repellendus veniam minima.
+            Adipisci tenetur facilis beatae odit repudiandae odio illum vero.
+            Voluptates, perferendis ut.
+          </p>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <h3 class="class-font-heading-h3">Type specifieke attributen</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora,
+            magni porro! Pariatur natus nesciunt non assumenda amet ad et
+            debitis aperiam impedit molestias totam ut iure a officiis, corrupti
+            est.
+          </p>
+        </li>
+        <li>
+          <h4 class="class-font-heading-class-h4">Checked attribuut</h4>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi
+            cupiditate a eos quis excepturi molestiae natus eius nam!
+            Laboriosam, natus? Nemo ducimus eaque reiciendis dignissimos harum
+            eveniet quae architecto ipsa.
+          </p>
+          <h5 class="class-font-heading-h5">Waardes</h5>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi
+            cupiditate a eos quis excepturi molestiae natus eius nam!
+            Laboriosam, natus? Nemo ducimus eaque reiciendis dignissimos harum
+            eveniet quae architecto ipsa.
+          </p>
+        </li>
+        <li>
+          <h4 class="class-font-heading-class-h4">Multiple attribuut</h4>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi
+            cupiditate a eos quis excepturi molestiae natus eius nam!
+            Laboriosam, natus? Nemo ducimus eaque reiciendis dignissimos harum
+            eveniet quae architecto ipsa.
+          </p>
+          <h5 class="class-font-heading-h5">Waardes</h5>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi
+            cupiditate a eos quis excepturi molestiae natus eius nam!
+            Laboriosam, natus? Nemo ducimus eaque reiciendis dignissimos harum
+            eveniet quae architecto ipsa.
+          </p>
+        </li>
+        <li>
+          <h4 class="class-font-heading-class-h4">Src attribuut</h4>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi
+            cupiditate a eos quis excepturi molestiae natus eius nam!
+            Laboriosam, natus? Nemo ducimus eaque reiciendis dignissimos harum
+            eveniet quae architecto ipsa.
+          </p>
+          <h5 class="class-font-heading-h5">Waardes</h5>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi
+            cupiditate a eos quis excepturi molestiae natus eius nam!
+            Laboriosam, natus? Nemo ducimus eaque reiciendis dignissimos harum
+            eveniet quae architecto ipsa.
+          </p>
+        </li>
+        <li>
+          <h4 class="class-font-heading-class-h4">Accept attribuut</h4>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi
+            cupiditate a eos quis excepturi molestiae natus eius nam!
+            Laboriosam, natus? Nemo ducimus eaque reiciendis dignissimos harum
+            eveniet quae architecto ipsa.
+          </p>
+          <h5 class="class-font-heading-h5">Waardes</h5>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi
+            cupiditate a eos quis excepturi molestiae natus eius nam!
+            Laboriosam, natus? Nemo ducimus eaque reiciendis dignissimos harum
+            eveniet quae architecto ipsa.
+          </p>
+        </li>
+        <li>
+          <h4 class="class-font-heading-class-h4">Size attribuut</h4>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi
+            cupiditate a eos quis excepturi molestiae natus eius nam!
+            Laboriosam, natus? Nemo ducimus eaque reiciendis dignissimos harum
+            eveniet quae architecto ipsa.
+          </p>
+          <h5 class="class-font-heading-h5">Waardes</h5>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi
+            cupiditate a eos quis excepturi molestiae natus eius nam!
+            Laboriosam, natus? Nemo ducimus eaque reiciendis dignissimos harum
+            eveniet quae architecto ipsa.
+          </p>
+        </li>
+        <li>
+          <h4 class="class-font-heading-class-h4">Capture attribuut</h4>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi
+            cupiditate a eos quis excepturi molestiae natus eius nam!
+            Laboriosam, natus? Nemo ducimus eaque reiciendis dignissimos harum
+            eveniet quae architecto ipsa.
+          </p>
+          <h5 class="class-font-heading-h5">Waardes</h5>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi
+            cupiditate a eos quis excepturi molestiae natus eius nam!
+            Laboriosam, natus? Nemo ducimus eaque reiciendis dignissimos harum
+            eveniet quae architecto ipsa.
+          </p>
+        </li>
+        <li>
+          <h4 class="class-font-heading-class-h4">Height/width attribuut</h4>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi
+            cupiditate a eos quis excepturi molestiae natus eius nam!
+            Laboriosam, natus? Nemo ducimus eaque reiciendis dignissimos harum
+            eveniet quae architecto ipsa.
+          </p>
+          <h5 class="class-font-heading-h5">Waardes</h5>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi
+            cupiditate a eos quis excepturi molestiae natus eius nam!
+            Laboriosam, natus? Nemo ducimus eaque reiciendis dignissimos harum
+            eveniet quae architecto ipsa.
+          </p>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <h2 class="class-font-heading-h2">Input types</h2>
+        </li>
+        <li>
+          <h3 class="class-font-heading-h3">Input types</h3>
+        </li>
+        <li>
+          <h4 class="class-font-heading-h4">Text input</h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis
+            quia at itaque fuga, sint sapiente doloribus fugit quae excepturi.
+            Cum, rerum deserunt maxime fuga sit accusamus alias velit quia
+            labore.
+          </p>
+          <h5 class="class-font-heading-h5">Waardes</h5>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero
+            quibusdam praesentium corrupti enim ab id quisquam, dolores officia
+            iste eligendi in quasi cumque vel ipsum possimus dolore itaque,
+            molestiae minima?
+          </p>
+        </li>
+      </ul>
+
+      <!-- 
+         
+        <li>
+          <h2>Input types</h2>
+          <p><code>type="text"</code> is het standaard HTML inputveld waarmee een gebruiker gewone tekst kan invoeren, zoals namen, zoekwoorden of korte berichten. Het accepteert letters, cijfers en symbolen, en je kunt het uitbreiden met attributen zoals placeholder, value, maxlength, minlength, readonly, disabled, name, id, autocomplete, pattern, size, autofocus, inputmode en required.</p>
+          <label for="text">
+            Voornaam
+            <input draggable="true" id="text" type="text">
+          </label>
+        </li>
+        <li>
+          <h3>Button input</h3>
+          <p><code>type="button"</code> is een klikbare knop, maar geen standaard functionaliteit heeft. In tegenstelling tot submit of reset doet een button input niets uit zichzelf. Je gebruikt hem meestal samen met Javascript om een actie uit te voeren wanneer iemand erop klikt. Op deze input kan je de volgende attributen op zetten: value, name, id, disabled, autofocus, form en formaction.</p>
+          <h3>Input button vs normale button</h3>
+          <p>Een input button is altijd een <i>self-closing element</a></i>, kan geen HTML bevatten (zoals iconen of spans), tekst wordt ingesteld met <code>value="..."</code> en wordt vooral gebruikt in oudere of simpele formulieren. Het button element kan wel HTML inhoud bevatten en is flexibeler en moderner. In de meeste gevallen is het beter om button te gebruiken. Het is flexibeler, omdat je er HTML inhoud in kunt plaatsen zoals iconen of spanse en het is makkelijker te stylen met CSS.</p>
+         
+          <p class="links-container">
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/button">Input button</a>
+            <a href="https://www.geeksforgeeks.org/html/what-are-self-closing-tags-in-html/">Self closing element</a>
+            <a href="https://stackoverflow.com/questions/25436145/input-type-button-vs-button">Input type button vs button</a>
+          </p>
+         
+          <label for="button">
+            Button
+            <input id="button" type="button">
+          </label>
+        </li>
+        <li>
+          <h3>Checkbox input</h3>
+          <p><code>type="checkbox"</code> is een HTML input waarmee een gebruiker een of meerdere opties kan aanvinken. Het is ideaal voor keuzes die onafhankelijk van elkaar zijn (bijvoorbeeld voorkeuren, instellingen of akkoordvakjes). De attributen die je hierop kan zetten zijn: checked, name, value, id, disabled, autofocus, required en form.</p>
+          <label for="checkbox">
+            Checkbox
+            <div>
+              <input id="checkbox" type="checkbox">
+              <input id="checkbox" type="checkbox">
+              <input id="checkbox" type="checkbox">
+            </div>
+          </label>
+        </li>
+        <li>
+          <h3>Color input</h3>
+          <p><code>type="color"</code> is een HTML input waarmee een gebruiker een kleur kan kiezen via een kleurkiezer die door de browser wordt weergegeven. Het is handig voor formulieren of apps waar gebruikers een kleur moeten selecteren, zoals bij thema instellingen of tekenprogramma’s. De volgende attributen kunnen hierop: value, name, id, disabled, autofocus, form en required.</p>
+          <label for="color">
+            Color
+            <input id="color" type="color">
+          </label>
+        </li>
+        <li>
+          <h3>Date input</h3>
+          <p><code>type="date"</code> is een HTML input waarmee een gebruiker een datum kan selecteren via een kalender UI die door de browser wordt weergegeven. Het is handig voor formulieren zoals geboortedata, reserveringen of deadlines. De attributen die je hieop kan zetten zijn: name, is, disabled, autofocus, required, min, max en form.</p>
+          <label for="date">
+            Date
+            <input id="date" type="date">
+          </label>
+        </li>
+        <li>
+          <h3>Datetime local input</h3>
+          <label for="datetime-local">
+            Datetime
+            <input id="datetime-local" type="datetime-local">
+          </label>
+        </li>
+        <li>
+          <h3>E-mail input</h3>
+          <label for="email">
+            E-mail
+            <input id="email" type="email">
+          </label>
+        </li>
+        <li>
+          <h3>File input</h3>
+          <label for="file">
+            File
+            <input id="file" type="file">
+          </label>
+        </li>
+        <li>
+          <h3>Hidden input</h3>
+          <label for="hidden">
+            Hidden
+            <input id="hidden" type="hidden">
+          </label>
+        </li>
+        <li>
+          <h3>Image input</h3>
+          <label for="image">
+            Image
+            <input id="image" type="image">
+          </label>
+        </li>
+        <li>
+          <h3>Month input</h3>
+          <label for="month">
+            Month
+            <input id="month" type="month">
+          </label>
+        </li>
+        <li>
+          <h3>Number input</h3>
+          <label for="number">
+            Number
+            <input id="number" type="number">
+          </label>
+        </li>
+        <li>
+          <h3>Password input</h3>
+          <label for="password">
+            Password
+            <input id="password" type="password">
+          </label>
+        </li>
+        <li>
+          <h3>Radio input</h3>
+          <label for="radio">
+            Radio
+            <input id="radio" type="radio">
+            <input id="radio" type="radio">
+            <input id="radio" type="radio">
+          </label>
+        </li>
+        <li>
+          <h3>Range input</h3>
+          <label for="range">
+            Range
+            <input
+              type="range"
+              min="0"
+              name="range"
+              max="100"
+              id="range"
+              value="50"
+              step="20"
+              list="lijnen"
+            />
+          </label>
+  
+          <datalist id="lijnen">
+            <option value="0">0</option>
+            <option value="20">20</option>
+            <option value="40">40</option>
+            <option value="60">60</option>
+            <option value="80">80</option>
+            <option value="100">100</option>
+          </datalist>
+        </li>
+        <li>
+          <h3>Reset input</h3>
+          <label for="reset">
+            Reset
+            <input id="reset" type="reset">
+          </label>
+        </li>
+        <li>
+          <h3>Search input</h3>
+          <label for="search">
+            Search
+            <input id="search" type="search">
+          </label>
+        </li>
+        <li>
+          <h3>Submit input</h3>
+          <label for="submit">
+            Submit
+            <input id="submit" type="submit">
+          </label>
+        </li>
+        <li>
+          <h3>Tel input</h3>
+          <label for="tel">
+            Tel
+            <input id="tel" type="tel">
+          </label>
+        </li>
+        <li>
+          <h3>Time input</h3>
+          <label for="time">
+            Time
+            <input id="time" type="time">
+          </label>
+        </li>
+        <li>
+          <h3>URL input</h3>
+          <label for="url">
+            URL
+            <input id="url" type="url">
+          </label>
+        </li>
+        <li>
+          <h3>Week input</h3>
+          <label for="week">
+            Week
+            <input id="week" type="week">
+          </label>
+        </li>
+      </ul> -->
+
+      <!-- <input type="number" />
+      <input type="date" /> -->
+      <!-- </li> -->
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>

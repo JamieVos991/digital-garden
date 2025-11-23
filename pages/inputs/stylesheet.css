@@ -1,0 +1,48 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-heading-h1: 2rem;
+  --font-heading-h2: 1.7rem;
+  --font-heading-h3: 1.3rem;
+  --font-heading-h4: 1.15rem;
+  --font-heading-h5: 1rem;
+
+  --font-family-gillsans: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans-serif;
+
+  --line-height-p: 1.4;
+  --line-height-heading: 1.2;
+
+  --primaire-kleur: hsl(36, 46%, 86%);
+  --zwarte-kleur: hsl(0, 0%, 15%);
+}
+
+.class-font-family {
+  font-family: var(--font-family-gillsans);
+}
+
+.class-font-heading-h1 {
+  font-size: var(--font-heading-h1);
+}
+
+.class-font-heading-h2 {
+  font-size: var(--font-heading-h2);
+}
+
+.class-font-heading-h3 {
+  font-size: var(--font-heading-h3);
+}
+
+.class-font-heading-h4 {
+  font-size: var(--font-heading-h4);
+}
+
+.class-font-heading-h5 {
+  font-size: var(--font-heading-h5);
+}

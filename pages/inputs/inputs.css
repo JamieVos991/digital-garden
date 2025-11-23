@@ -1,0 +1,65 @@
+body {
+  background-color: var(--primaire-kleur);
+  display: flex;
+  justify-content: center;
+
+  p {
+    line-height: var(--line-height-p);
+  }
+
+  code {
+    background-color: black;
+    color: white;
+    padding: 4px 7px;
+    border-radius: 3px;
+    display: inline-flex;
+  }
+
+  main {
+    display: grid;
+    gap: 3rem;
+    max-width: 30rem;
+    padding: 3rem 0;
+
+    ul {
+      list-style: none;
+      display: grid;
+
+      h1,
+      h2,
+      h3 {
+        padding-bottom: 0.5rem;
+      }
+
+      &:nth-of-type(2) {
+        gap: 2rem;
+      }
+
+      &:nth-of-type(3),
+      &:nth-of-type(4),
+      &:nth-of-type(5),
+      &:nth-of-type(6) {
+        gap: 3.5rem;
+
+        li {
+          h3 {
+            padding-top: 3rem;
+          }
+
+          h4 {
+            padding-bottom: 15px;
+          }
+
+          h5 {
+            padding: 15px 0 7px;
+          }
+
+          a {
+            padding-top: 10px;
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}

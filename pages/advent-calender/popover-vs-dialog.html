@@ -15,14 +15,17 @@
     <button popovertarget="mijn-popover">Open Popover</button>
     <div popover id="mijn-popover">Dit is een popover</div>
 
-    <button id="openDialog">open dialog</button>
+    <button type="button" commandfor="mijnDialog" command="show-modal">
+      Open dialog
+    </button>
 
     <dialog id="mijnDialog">
       <p>Dit is een popup venster (dialog)</p>
-      <form method="dialog">
-        <button>Sluiten</button>
-      </form>
+      <button type="button" commandfor="mijnDialog" command="close">
+        Close
+      </button>
     </dialog>
+
     <ul>
       <li>
         Je moet nadenken over hoe popovers vanuit dialogs kunnen worden geopend,
@@ -78,13 +81,5 @@
         (zoals “kopiëren”).
       </li>
     </ul>
-    <script>
-      const dialog = document.getElementById("mijnDialog");
-      const openBtn = document.getElementById("openDialog");
-
-      openBtn.addEventListener("click", () => {
-        dialog.showModal();
-      });
-    </script>
   </body>
 </html>

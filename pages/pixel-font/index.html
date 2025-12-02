@@ -5,28 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Viking font</title>
     <style>
+      @font-face {
+        font-family: "Viking";
+        src: url("./Vikingfont-Regular.otf"), url(".otf") format("opentype");
+      }
+
       body {
         background: black;
         color: red;
         line-height: 1.4;
 
-        p:nth-of-type(1) {
-          grid-column: 2;
-        }
-
         .viking-p {
           font-family: Viking, sans-serif;
           font-size: 200%;
         }
-
-        section {
-          grid-column: 2;
-        }
       }
 
-      @font-face {
-        font-family: "Viking";
-        src: url("./Vikingfont-Regular.otf"), url(".otf") format("opentype");
+      #info {
+        color: yellow !important;
       }
 
       .CM {
@@ -106,13 +102,10 @@
       .CQMAX {
         max-width: 50cqmax;
       }
-
-      #info {
-        color: yellow !important;
-      }
     </style>
   </head>
   <body>
+    <!-- Pixel font text -->
     <p class="viking-p">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint est soluta
       sed hic beatae consequatur et neque, numquam eos nemo quidem aliquid
@@ -121,38 +114,174 @@
 
     <section>
       <p id="info"></p>
+      <div>
+        <h2>Absolute Length Units</h2>
+        <button
+          commandfor="max-p"
+          command="set-class"
+          data-class="CM"
+          data-info="12 centimeter = 453 pixels"
+        >
+          Centimeters
+        </button>
+        <button
+          commandfor="max-p"
+          command="set-class"
+          data-class="MM"
+          data-info="130 millimeter = 491 pixels"
+        >
+          Millimeters
+        </button>
+        <button
+          commandfor="max-p"
+          command="set-class"
+          data-class="QM"
+          data-info="450 quarter millimeters = 425 pixels"
+        >
+          Quarter-millimeters
+        </button>
+        <button
+          commandfor="max-p"
+          command="set-class"
+          data-class="I"
+          data-info="4.5 inches = 432 pixels"
+        >
+          Inches
+        </button>
+        <button
+          commandfor="max-p"
+          command="set-class"
+          data-class="PI"
+          data-info="24 picas = 382 pixels"
+        >
+          Picas
+        </button>
+        <button
+          commandfor="max-p"
+          command="set-class"
+          data-class="PO"
+          data-info="300 points = 400 pixels"
+        >
+          Points
+        </button>
+        <button
+          commandfor="max-p"
+          command="set-class"
+          data-class="PX"
+          data-info="400 pixels"
+        >
+          Pixels
+        </button>
+        <button
+          commandfor="max-p"
+          command="set-class"
+          data-class="PX-mono"
+          data-info="400 pixels met monospace"
+        >
+          Pixels met Monospace
+        </button>
+      </div>
 
       <div>
-        <h2>Absolute Lenght Units</h2>
-        <button id="centimeter-btn">Centimeters</button>
-        <button id="milimeter-btn">Milimeters</button>
-        <button id="quatermilimeter-btn">Quater-milimeters</button>
-        <button id="inches-btn">Inches</button>
-        <button id="picas-btn">Picas</button>
-        <button id="points-btn">Points</button>
-        <button id="px-btn">Pixels</button>
-        <button id="pxmono-btn">Pixels met Monospace</button>
+        <h2>Font Relative Length Units</h2>
+        <button
+          commandfor="max-p"
+          command="set-class"
+          data-class="EM"
+          data-info="max-width: 25em"
+        >
+          EM
+        </button>
+        <button
+          commandfor="max-p"
+          command="set-class"
+          data-class="REM"
+          data-info="max-width: 30rem"
+        >
+          REM
+        </button>
+        <button
+          commandfor="max-p"
+          command="set-class"
+          data-class="REM-mono"
+          data-info="max-width: 30rem, monospace"
+        >
+          REM met Monospace
+        </button>
+        <button
+          commandfor="max-p"
+          command="set-class"
+          data-class="EX"
+          data-info="max-width: 60ex"
+        >
+          EX
+        </button>
+        <button
+          commandfor="max-p"
+          command="set-class"
+          data-class="CH"
+          data-info="max-width: 50ch"
+        >
+          CH
+        </button>
+        <button
+          commandfor="max-p"
+          command="set-class"
+          data-class="LH"
+          data-info="max-width: 20lh"
+        >
+          LH
+        </button>
       </div>
+
       <div>
-        <h2>Font relative length units</h2>
-        <button id="em-btn">EM</button>
-        <button id="rem-btn">REM</button>
-        <button id="remmono-btn">REM met Monospace</button>
-        <button id="ex-btn">EX</button>
-        <button id="ch-btn">CH</button>
-        <button id="lh-btn">LH</button>
+        <h2>Viewport Relative Units</h2>
+        <button
+          commandfor="max-p"
+          command="set-class"
+          data-class="VW"
+          data-info="max-width: 50vw"
+        >
+          VW
+        </button>
+        <button
+          commandfor="max-p"
+          command="set-class"
+          data-class="VMIN"
+          data-info="max-width: 55vmin"
+        >
+          VMIN
+        </button>
       </div>
+
       <div>
-        <h2>Viewport relative units</h2>
-        <button id="vw-btn">VW</button>
-        <button id="vmin-btn">VMIN</button>
+        <h2>Container Units</h2>
+        <button
+          commandfor="max-p"
+          command="set-class"
+          data-class="CQW"
+          data-info="max-width: 50cqw"
+        >
+          CQW
+        </button>
+        <button
+          commandfor="max-p"
+          command="set-class"
+          data-class="CQMIN"
+          data-info="max-width: 50cqmin"
+        >
+          CQMIN
+        </button>
+        <button
+          commandfor="max-p"
+          command="set-class"
+          data-class="CQMAX"
+          data-info="max-width: 50cqmax"
+        >
+          CQMAX
+        </button>
       </div>
-      <div>
-        <h2>Container units</h2>
-        <button id="cqw-btn">CQW</button>
-        <button id="cqmin-btn">CQMIN</button>
-        <button id="cqmax-btn">CQMAX</button>
-      </div>
+
       <blockquote cite="http://webtypography.net/2.1.2">
         <p id="max-p">
           Anything from 45 to 75 characters is widely regarded as a satisfactory
@@ -166,114 +295,31 @@
     </section>
   </body>
   <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const info = document.getElementById("info");
-      const p = document.getElementById("max-p");
+    // Selecteer alle knoppen die een 'data-class' attribuut hebben (dit zijn de knoppen die commands uitvoeren)
+    const buttons = document.querySelectorAll("button[data-class]");
 
-      const buttons = [
-        {
-          id: "centimeter-btn",
-          class: "CM",
-          tekst: "12 centimeter = 453 pixels",
-        },
-        {
-          id: "milimeter-btn",
-          class: "MM",
-          tekst: "130 millimeter = 491 pixels",
-        },
-        {
-          id: "quatermilimeter-btn",
-          class: "QM",
-          tekst: "450 quarter millimeters = 425 pixels",
-        },
-        {
-          id: "inches-btn",
-          class: "I",
-          tekst: "4.5 inches = 432 pixels",
-        },
-        {
-          id: "picas-btn",
-          class: "PI",
-          tekst: "24 picas = 382 pixels",
-        },
-        {
-          id: "points-btn",
-          class: "PO",
-          tekst: "300 points = 400 pixels",
-        },
-        {
-          id: "px-btn",
-          class: "PX",
-          tekst: "400 pixels",
-        },
-        {
-          id: "pxmono-btn",
-          class: "PX-mono",
-          tekst: "400 pixels met monospace",
-        },
-        {
-          id: "em-btn",
-          class: "EM",
-          tekst: "max-width: 25em;",
-        },
-        {
-          id: "rem-btn",
-          class: "REM",
-          tekst: "max-width: 30rem;",
-        },
-        {
-          id: "remmono-btn",
-          class: "REM-mono",
-          tekst: "max-width: 30rem;",
-        },
-        {
-          id: "ex-btn",
-          class: "EX",
-          tekst: "max-width: 60ex;",
-        },
-        {
-          id: "ch-btn",
-          class: "CH",
-          tekst: "max-width: 50ch;",
-        },
-        {
-          id: "lh-btn",
-          class: "LH",
-          tekst: "max-width: 20lh;",
-        },
-        {
-          id: "vw-btn",
-          class: "VW",
-          tekst: "max-width: 50vw;",
-        },
-        {
-          id: "vmin-btn",
-          class: "VMIN",
-          tekst: "max-width: 55vmin;",
-        },
-        {
-          id: "cqw-btn",
-          class: "CQW",
-          tekst: "max-width: 50cqw;",
-        },
-        {
-          id: "cqmin-btn",
-          class: "CQMIN",
-          tekst: "max-width: 50cqmin;",
-        },
-        {
-          id: "cqmax-btn",
-          class: "CQMAX",
-          tekst: "max-width: 50cqmax;",
-        },
-      ];
+    // Loop door elke knop
+    buttons.forEach((btn) => {
+      // Voeg een klik event listener toe aan de knop
+      btn.addEventListener("click", () => {
+        // Haal het ID op van het element waarop het command moet worden uitgevoerd
+        const targetId = btn.getAttribute("commandfor");
 
-      buttons.forEach(({ id, class: className, tekst }) => {
-        document.getElementById(id).addEventListener("click", () => {
-          p.className = className;
-          info.textContent = tekst;
-        });
+        // Haal het doel element op
+        const p = document.getElementById(targetId);
+
+        // Voer het command uit: 'set-class' – stel de class van het doel-element in
+        if (p) p.className = btn.dataset.class;
+
+        // Haal het element op waar de command info wordt weergegeven
+        const info = document.getElementById("info");
+
+        // Update de command info met de uitleg van deze knop
+        if (info) info.textContent = btn.dataset.info;
       });
     });
+
+    // https://open-ui.org/components/invokers.explainer/
+    // https://developer.mozilla.org/en-US/docs/Web/API/Invoker_Commands_API
   </script>
 </html>

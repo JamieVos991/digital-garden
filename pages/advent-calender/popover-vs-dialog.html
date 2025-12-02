@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advent Calender 1</title>
+  </head>
+
+  <style>
+    body {
+      max-width: 30rem;
+    }
+  </style>
+  <body>
+    <button popovertarget="mijn-popover">Open Popover</button>
+    <div popover id="mijn-popover">Dit is een popover</div>
+
+    <button id="openDialog">open dialog</button>
+
+    <dialog id="mijnDialog">
+      <p>Dit is een popup venster (dialog)</p>
+      <form method="dialog">
+        <button>Sluiten</button>
+      </form>
+    </dialog>
+    <ul>
+      <li>
+        Je moet nadenken over hoe popovers vanuit dialogs kunnen worden geopend,
+        vooral als beide tegelijkertijd zichtbaar kunnen zijn en onafhankelijk
+        werken.
+      </li>
+      <li>
+        Een optie is om popovers op de achtergrond te blokkeren totdat de dialog
+        is gesloten, maar dit kan problemen geven als meldingen snel actie
+        vereisen.
+      </li>
+      <li>
+        Soms moet een popover langer blijven bestaan dan de dialog, bijvoorbeeld
+        om op de gebruiker te wachten nadat de dialog is gesloten.
+      </li>
+      <li>
+        Conflicten tussen popovers en dialogs zijn soms onvermijdelijk.
+        Verwijder daarom niet zomaar je bestaande popover-architectuur als je
+        deze situatie kunt tegenkomen.
+      </li>
+      <li>
+        <a href="https://www.htmhell.dev/adventcalendar/2025/1/"
+          >advent-calender-1</a
+        >
+      </li>
+    </ul>
+
+    <ul>
+      <b>Gebruik dialog als:</b>
+
+      <li>
+        Je een volledig venster wilt dat de gebruiker moet afhandelen voordat
+        hij verder kan.
+      </li>
+      <li>Je een formulier, waarschuwing, of belangrijke melding toont.</li>
+      <li>
+        Je wilt dat de browser automatisch focus en toegankelijkheid regelt.
+      </li>
+
+      <li>Voorbeeld: een “Bevestig dat je wilt verwijderen” popup.</li>
+
+      <b>Gebruik een popover als:</b>
+
+      <li>
+        Je kleine extra info wilt tonen die bij een knop of element hoort.
+      </li>
+      <li>
+        Je wilt dat de gebruiker nog steeds interactie kan hebben met de rest
+        van de pagina.
+      </li>
+      <li>
+        Voorbeeld: een tooltip, uitleg bij een formulier, of snelle actieknop
+        (zoals “kopiëren”).
+      </li>
+    </ul>
+    <script>
+      const dialog = document.getElementById("mijnDialog");
+      const openBtn = document.getElementById("openDialog");
+
+      openBtn.addEventListener("click", () => {
+        dialog.showModal();
+      });
+    </script>
+  </body>
+</html>

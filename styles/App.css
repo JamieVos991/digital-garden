@@ -27,7 +27,7 @@ body {
 }
 
 button {
-  font-family: var(--font);
+  /* 
   background: var(--tertiary-kleur);
   border-radius: var(--border-radius);
   color: var(--secundary-kleur);
@@ -35,7 +35,17 @@ button {
   letter-spacing: 1px;
   cursor: pointer;
   font-size: 0.8rem;
-  padding: 12px 30px;
+  padding: 12px 30px; */
+
+  font-family: var(--font);
+  background: none;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  gap: 10px;
 
   span {
     display: flex;

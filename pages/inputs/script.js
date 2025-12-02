@@ -1,15 +1,16 @@
-  const filterInput = document.getElementById("filterInput");
-  const listItems = document.querySelectorAll("main ul li");
+const filterInput = document.getElementById("filterInput");
+const listItems = document.querySelectorAll("main ul li");
 
-  filterInput.addEventListener("input", () => {
-    const search = filterInput.value.toLowerCase();
+filterInput.addEventListener("input", () => {
+  document.querySelectorAll("main ul li details").forEach(d => d.open = false);
 
-    listItems.forEach(li => {
-      const heading = li.querySelector("h2");
-      if (!heading) return; // skip items zonder h2
+  const search = filterInput.value.toLowerCase();
 
-      const text = heading.textContent.toLowerCase();
+  listItems.forEach(li => {
+    const heading = li.querySelector("h2");
+    if (!heading) return;
 
-      li.style.display = text.includes(search) ? "" : "none";
-    });
+    const text = heading.textContent.toLowerCase();
+    li.style.display = text.includes(search) ? "" : "none";
   });
+});

@@ -1,27 +1,38 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const knoppen = document.querySelectorAll("button[data-sprint]");
-    const sprints = document.querySelectorAll(".sprint");
-  
-    const details = document.querySelectorAll("details");
-  
-    knoppen.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const index = btn.dataset.sprint;
-  
-        sprints.forEach((s) => s.classList.remove("active"));
-  
-        if (sprints[index]) {
-          sprints[index].classList.add("active");
+  const buttons = document.querySelectorAll("button[data-sprint]");
+  const sprints = document.querySelectorAll(".sprint");
+
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const sprintIndex = btn.dataset.sprint;
+      const targetId = btn.dataset.target;
+
+      // Hide all sprints
+      sprints.forEach(s => s.classList.remove("active"));
+
+      // Show correct sprint
+      const sprint = sprints[sprintIndex];
+      if (sprint) {
+        sprint.classList.add("active");
+
+        // Scroll to matching h4
+        if (targetId) {
+          const targetElement = sprint.querySelector(`h4[id="${targetId}"]`);
+          if (targetElement) {
+            targetElement.scrollIntoView({ behavior: "smooth" });
+          }
         }
-      });
-    });
-  
-    if (sprints.length > 0) {
-      sprints[0].classList.add("active");
-    }
-  
-    details.forEach((detail) => {
-      detail.open = true;
+      }
     });
   });
-  
+
+  // Open first sprint by default
+  if (sprints.length > 0) {
+    sprints[0].classList.add("active");
+  }
+
+  // Keep all details open
+  document.querySelectorAll("details").forEach((detail) => {
+    detail.open = true;
+  });
+});

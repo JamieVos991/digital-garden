@@ -3,7 +3,7 @@ main {
 
   @media (min-width: 900px) {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 20rem 1fr;
     grid-template-rows: auto 1fr auto;
     height: 100vh;
     grid-template-areas:
@@ -12,69 +12,87 @@ main {
       "footer  content";
   }
 
-  section:nth-of-type(1) {
-    min-height: 400px;
-    display: flex;
-    align-items: center;
-    padding: 50px 30px;
-    justify-content: center;
-    grid-area: title;
+  nav {
+    padding: 2rem;
+    overflow: scroll;
+    position: relative;
+    height: 100dvh;
 
-    @media (min-width: 900px) {
-      overflow: hidden;
-      width: 50vw;
+    .details-sprints {
+      ul {
+        padding-left: 30px;
+      }
+    }
+
+    .details-sprint,
+    .details-handig,
+    .details-tuinieren,
+    .details-git {
+      display: grid;
+      padding-left: 30px;
     }
 
     ul {
+      list-style: none;
       display: flex;
-      flex-direction: column;
-      gap: 20px;
-      text-align: center;
-      max-width: 35rem;
 
-      li {
+      a {
+        color: white;
+      }
+
+      details {
+        summary {
+          cursor: pointer;
+          color: var(--tertiary-kleur);
+          list-style: none;
+          display: flex;
+          align-items: center;
+          gap: 5px;
+
+          &::-webkit-details-marker {
+            display: none;
+          }
+
+          &::before {
+            content: "";
+            width: 1rem;
+            height: 1rem;
+            display: block;
+            mask: url("../assets/svg/chevron-down.svg") center/contain no-repeat;
+            -webkit-mask: url("../assets/svg/chevron-down.svg") center/contain
+              no-repeat;
+            background-color: var(--tertiary-kleur);
+          }
+        }
+      }
+
+      .li-details {
+        padding: 10px 0 0 20px;
         display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 20px;
 
-        &:nth-of-type(1) {
-          display: flex;
+        ul {
+          padding-left: 15px;
 
-          @media (min-width: 380px) {
-            gap: 20px;
+          li {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding-top: 10px;
           }
-
-          h1 {
-            font-size: 50px;
-            transform: translateY(10px);
-          }
-        }
-
-        &:nth-of-type(2) {
-          h2 {
-            color: var(--tertiary-kleur);
-            font-weight: 100;
-            font-size: 22px;
-          }
-        }
-
-        &:nth-of-type(4) {
-          display: flex;
-          gap: 10px;
         }
       }
     }
   }
 
-  section:nth-of-type(2) {
+  section:nth-of-type(1) {
     background: var(--secundary-kleur);
     padding: 30px;
     grid-area: content;
     min-height: 300px;
 
     @media (min-width: 900px) {
-      width: 50vw;
       overflow-y: auto;
     }
 
@@ -95,6 +113,11 @@ main {
         display: flex;
         flex-direction: column;
         gap: 15px;
+        max-width: 30rem;
+
+        h4 {
+          scroll-margin-top: 20px;
+        }
 
         details[open] summary .arrow {
           transform: rotate(270deg);

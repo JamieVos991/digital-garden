@@ -1,3 +1,7 @@
+@view-transition {
+  navigation: auto;
+}
+
 main {
   height: 100vh;
 
@@ -7,9 +11,9 @@ main {
     grid-template-rows: auto 1fr auto;
     height: 100vh;
     grid-template-areas:
-      "title  content"
-      "title  content"
-      "footer  content";
+      "title  content bron"
+      "title  content bron"
+      "footer  content bron";
   }
 
   nav {
@@ -91,6 +95,7 @@ main {
     padding: 30px;
     grid-area: content;
     min-height: 300px;
+    place-items: center;
 
     @media (min-width: 900px) {
       overflow-y: auto;
@@ -101,11 +106,16 @@ main {
 
       &.sprint {
         display: none;
+        max-width: 35rem;
+
+        .li-emojis {
+          flex-direction: row;
+        }
 
         &.active {
           display: flex;
           flex-direction: column;
-          gap: 25px;
+          gap: 3rem;
         }
       }
 
@@ -113,10 +123,29 @@ main {
         display: flex;
         flex-direction: column;
         gap: 15px;
-        max-width: 30rem;
+        border: 1px solid var(--tertiary-kleur);
+        padding: 2rem;
+
+        div {
+          display: grid;
+          padding-top: 10px;
+          gap: 5px;
+        }
+
+        h2 {
+          color: var(--tertiary-kleur);
+          font-weight: 100;
+        }
 
         h4 {
-          scroll-margin-top: 20px;
+          scroll-margin-top: 50px;
+          font-size: 200%;
+          font-weight: 400;
+        }
+
+        h5 {
+          font-size: 125%;
+          font-weight: 500;
         }
 
         details[open] summary .arrow {
@@ -154,6 +183,32 @@ main {
               text-decoration: none;
             }
           }
+        }
+      }
+    }
+  }
+
+  section:nth-of-type(2) {
+    background-color: var(--main-kleur);
+    grid-area: bron;
+    width: 25rem;
+
+    ul {
+      padding: 2rem;
+      list-style: none;
+
+      &.sprint {
+        display: none;
+        max-width: 35rem;
+
+        .li-emojis {
+          flex-direction: row;
+        }
+
+        &.active {
+          display: flex;
+          flex-direction: column;
+          gap: 3rem;
         }
       }
     }

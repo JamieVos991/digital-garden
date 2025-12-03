@@ -295,26 +295,20 @@
     </section>
   </body>
   <script>
-    const buttons = document.querySelectorAll("button[data-class]");
-
-    buttons.forEach((btn) => {
-      // Voegt een klik event listener toe aan de huidige knop
-      btn.addEventListener("click", () => {
-        // Haalt de waarde van het commandfor attribuut van de knop op
-        // Dit geeft het id van het element dat we willen aanpassen
-        const targetId = btn.getAttribute("commandfor");
-
-        // Zoekt het element met het id dat overeenkomt met targetId
-        const p = document.getElementById(targetId);
-
-        // Als het element bestaat, zet de className gelijk aan de waarde van data-class van de knop
-        if (p) p.className = btn.dataset.class;
-
-        const info = document.getElementById("info");
-
-        // Als het element bestaat, zet de tekstinhoud gelijk aan de waarde van data-info van de knop
-        if (info) info.textContent = btn.dataset.info;
-      });
+    const maxP = document.querySelector("#max-p");
+    const info = document.getElementById("info");
+    maxP.addEventListener("command", function (ev) {
+      if (event.command === "--set-class") {
+        if (document.startViewTransition) {
+          document.startViewTransition(function () {
+            maxP.className = ev.source.dataset.class;
+            info.textContent = ev.source.dataset.info;
+          });
+        } else {
+          maxP.className = ev.source.dataset.class;
+          info.textContent = ev.source.dataset.info;
+        }
+      }
     });
   </script>
 </html>

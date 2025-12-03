@@ -118,7 +118,7 @@
         <h2>Absolute Length Units</h2>
         <button
           commandfor="max-p"
-          command="set-class"
+          command="--set-class"
           data-class="CM"
           data-info="12 centimeter = 453 pixels"
         >
@@ -126,7 +126,7 @@
         </button>
         <button
           commandfor="max-p"
-          command="set-class"
+          command="--set-class"
           data-class="MM"
           data-info="130 millimeter = 491 pixels"
         >
@@ -134,7 +134,7 @@
         </button>
         <button
           commandfor="max-p"
-          command="set-class"
+          command="--set-class"
           data-class="QM"
           data-info="450 quarter millimeters = 425 pixels"
         >
@@ -142,7 +142,7 @@
         </button>
         <button
           commandfor="max-p"
-          command="set-class"
+          command="--set-class"
           data-class="I"
           data-info="4.5 inches = 432 pixels"
         >
@@ -150,7 +150,7 @@
         </button>
         <button
           commandfor="max-p"
-          command="set-class"
+          command="--set-class"
           data-class="PI"
           data-info="24 picas = 382 pixels"
         >
@@ -158,7 +158,7 @@
         </button>
         <button
           commandfor="max-p"
-          command="set-class"
+          command="--set-class"
           data-class="PO"
           data-info="300 points = 400 pixels"
         >
@@ -166,7 +166,7 @@
         </button>
         <button
           commandfor="max-p"
-          command="set-class"
+          command="--set-class"
           data-class="PX"
           data-info="400 pixels"
         >
@@ -174,7 +174,7 @@
         </button>
         <button
           commandfor="max-p"
-          command="set-class"
+          command="--set-class"
           data-class="PX-mono"
           data-info="400 pixels met monospace"
         >
@@ -186,7 +186,7 @@
         <h2>Font Relative Length Units</h2>
         <button
           commandfor="max-p"
-          command="set-class"
+          command="--set-class"
           data-class="EM"
           data-info="max-width: 25em"
         >
@@ -194,7 +194,7 @@
         </button>
         <button
           commandfor="max-p"
-          command="set-class"
+          command="--set-class"
           data-class="REM"
           data-info="max-width: 30rem"
         >
@@ -202,7 +202,7 @@
         </button>
         <button
           commandfor="max-p"
-          command="set-class"
+          command="--set-class"
           data-class="REM-mono"
           data-info="max-width: 30rem, monospace"
         >
@@ -210,7 +210,7 @@
         </button>
         <button
           commandfor="max-p"
-          command="set-class"
+          command="--set-class"
           data-class="EX"
           data-info="max-width: 60ex"
         >
@@ -218,7 +218,7 @@
         </button>
         <button
           commandfor="max-p"
-          command="set-class"
+          command="--set-class"
           data-class="CH"
           data-info="max-width: 50ch"
         >
@@ -226,7 +226,7 @@
         </button>
         <button
           commandfor="max-p"
-          command="set-class"
+          command="--set-class"
           data-class="LH"
           data-info="max-width: 20lh"
         >
@@ -238,7 +238,7 @@
         <h2>Viewport Relative Units</h2>
         <button
           commandfor="max-p"
-          command="set-class"
+          command="--set-class"
           data-class="VW"
           data-info="max-width: 50vw"
         >
@@ -246,7 +246,7 @@
         </button>
         <button
           commandfor="max-p"
-          command="set-class"
+          command="--set-class"
           data-class="VMIN"
           data-info="max-width: 55vmin"
         >
@@ -258,7 +258,7 @@
         <h2>Container Units</h2>
         <button
           commandfor="max-p"
-          command="set-class"
+          command="--set-class"
           data-class="CQW"
           data-info="max-width: 50cqw"
         >
@@ -266,7 +266,7 @@
         </button>
         <button
           commandfor="max-p"
-          command="set-class"
+          command="--set-class"
           data-class="CQMIN"
           data-info="max-width: 50cqmin"
         >
@@ -274,7 +274,7 @@
         </button>
         <button
           commandfor="max-p"
-          command="set-class"
+          command="--set-class"
           data-class="CQMAX"
           data-info="max-width: 50cqmax"
         >
@@ -295,31 +295,26 @@
     </section>
   </body>
   <script>
-    // Selecteer alle knoppen die een 'data-class' attribuut hebben (dit zijn de knoppen die commands uitvoeren)
     const buttons = document.querySelectorAll("button[data-class]");
 
-    // Loop door elke knop
     buttons.forEach((btn) => {
-      // Voeg een klik event listener toe aan de knop
+      // Voegt een klik event listener toe aan de huidige knop
       btn.addEventListener("click", () => {
-        // Haal het ID op van het element waarop het command moet worden uitgevoerd
+        // Haalt de waarde van het commandfor attribuut van de knop op
+        // Dit geeft het id van het element dat we willen aanpassen
         const targetId = btn.getAttribute("commandfor");
 
-        // Haal het doel element op
+        // Zoekt het element met het id dat overeenkomt met targetId
         const p = document.getElementById(targetId);
 
-        // Voer het command uit: 'set-class' – stel de class van het doel-element in
+        // Als het element bestaat, zet de className gelijk aan de waarde van data-class van de knop
         if (p) p.className = btn.dataset.class;
 
-        // Haal het element op waar de command info wordt weergegeven
         const info = document.getElementById("info");
 
-        // Update de command info met de uitleg van deze knop
+        // Als het element bestaat, zet de tekstinhoud gelijk aan de waarde van data-info van de knop
         if (info) info.textContent = btn.dataset.info;
       });
     });
-
-    // https://open-ui.org/components/invokers.explainer/
-    // https://developer.mozilla.org/en-US/docs/Web/API/Invoker_Commands_API
   </script>
 </html>

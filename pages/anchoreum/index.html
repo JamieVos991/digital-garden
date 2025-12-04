@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anchoreum</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: #333;
+      }
+
+      main {
+        display: grid;
+        height: 100dvh;
+        place-items: center;
+        position: relative;
+      }
+
+      section {
+        border: 2px dotted white;
+        width: 20rem;
+        height: 15rem;
+        display: grid;
+        place-items: center;
+        anchor-name: --section;
+        anchor-scope: element;
+      }
+
+      section h1 {
+        color: pink;
+      }
+
+      div {
+        position: absolute;
+        position-anchor: --section;
+        border: 2px dotted white;
+        width: 10rem;
+        display: grid;
+        place-items: center;
+        color: white;
+      }
+
+      div:nth-of-type(1) {
+        position-area: top left;
+        position-try-fallbacks: top;
+      }
+
+      div:nth-of-type(2) {
+        position-area: right bottom;
+        position-try-fallbacks: bottom;
+        /* height: anchor-size(--section height, 90%); */
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section>
+        <h1><code>anchor-name: --section;</code></h1>
+      </section>
+      <div>
+        <code> position-area: top left;</code>
+      </div>
+      <div><code>position-area: bottom right;</code></div>
+    </main>
+  </body>
+</html>

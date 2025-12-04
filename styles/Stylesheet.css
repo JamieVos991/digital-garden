@@ -106,7 +106,7 @@ main {
 
       &.sprint {
         display: none;
-        max-width: 35rem;
+        max-width: 40rem;
 
         .li-emojis {
           flex-direction: row;
@@ -139,12 +139,18 @@ main {
 
         h4 {
           scroll-margin-top: 50px;
+          color: var(--tertiary-kleur);
           font-size: 200%;
           font-weight: 400;
         }
 
+        img {
+          display: none;
+        }
+
         h5 {
           font-size: 125%;
+          color: var(--tertiary-kleur);
           font-weight: 500;
         }
 
@@ -191,7 +197,7 @@ main {
   section:nth-of-type(2) {
     background-color: var(--main-kleur);
     grid-area: bron;
-    width: 25rem;
+    width: 20rem;
 
     ul {
       padding: 2rem;
@@ -199,7 +205,7 @@ main {
 
       &.sprint {
         display: none;
-        max-width: 35rem;
+        max-width: 40rem;
 
         .li-emojis {
           flex-direction: row;

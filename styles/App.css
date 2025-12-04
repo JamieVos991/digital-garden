@@ -16,6 +16,10 @@
   --border-radius: 5px;
 }
 
+p {
+  line-height: 1.6;
+}
+
 body {
   background: var(--main-kleur);
   font-family: var(--font);
@@ -54,7 +58,7 @@ button {
 }
 
 a {
-  color: var(--tertiary-kleur);
+  color: #9c9ce9;
   text-decoration: none;
 }
 
@@ -62,7 +66,7 @@ code {
   background: black;
   padding: 5px;
   border-radius: var(--border-radius);
-  display: inline-block;
+  /* display: inline-block; */
 }
 
 .gif {

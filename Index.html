@@ -13,11 +13,11 @@
       <nav>
         <ul>
           <li>
-            <details>
+            <details open>
               <summary>Home</summary>
               <ul>
                 <li class="li-details">
-                  <details>
+                  <details open>
                     <summary>Learning Journal</summary>
                     <ul>
                       <li>
@@ -275,7 +275,7 @@
                             </li>
                           </ul>
                         </details>
-                        <details class="sprint-nav">
+                        <details open class="sprint-nav">
                           <summary>Sprint 3</summary>
                           <ul class="details-sprint">
                             <li>
@@ -289,7 +289,7 @@
                             <li>
                               <button
                                 data-sprint="3"
-                                data-target="dindsdag-14-oktober"
+                                data-target="dinsdag-14-oktober"
                               >
                                 Dinsdag 14 oktober
                               </button>
@@ -307,7 +307,7 @@
                                 data-sprint="3"
                                 data-target="donderdag-16-oktober"
                               >
-                                donderdag 16 oktober
+                                Donderdag 16 oktober
                               </button>
                             </li>
                             <li>
@@ -315,7 +315,7 @@
                                 data-sprint="3"
                                 data-target="vrijdag-17-oktober"
                               >
-                                vrijdag 17 oktober
+                                Vrijdag 17 oktober
                               </button>
                             </li>
                             <li><b>Herfstvakaantie</b></li>
@@ -614,7 +614,7 @@
                       </li>
                     </ul>
                   </details>
-                  <details>
+                  <details open>
                     <summary>Handigheidjes</summary>
                     <ul class="details-handig">
                       <li>
@@ -622,7 +622,7 @@
                       </li>
                     </ul>
                   </details>
-                  <details>
+                  <details open>
                     <summary>Tuinieren</summary>
                     <ul class="details-tuinieren">
                       <li>
@@ -2059,10 +2059,7 @@
             </p>
             <p>
               Elke keer als iemand gepresenteerd had, kregen ze feedback van de
-              leerlingen en opdrachtgever. Netzoals ik.
-            </p>
-            <p>
-              Hier heb ik
+              leerlingen en opdrachtgever. Netzoals ik. Hier heb ik
               <a
                 href="https://github.com/JamieVos991/all-human-accessible-website/issues/1"
                 >issues</a
@@ -2080,7 +2077,7 @@
         </ul>
         <ul class="sprint">
           <li>
-            <h4>Maandag 13 oktober</h4>
+            <h4 id="maandag-13-oktober">Maandag 13 oktober</h4>
             <p>
               Vandaag is sprint 3 begonnen! Dat begint altijd weer met een
               sprint planning. Deze sprint gaat over toegankelijk van een
@@ -2095,14 +2092,10 @@
               beperking een website ook op een prettige manier kunnen bedienen.
             </p>
             <p>
-              Een goede toegankelijke website voldoet aan de
-              <a href="https://www.w3.org/TR/WCAG22/"
-                >Web Content Accessibility Guidelines (WCAG)</a
-              >
-              van het W3C.
-              <a href="https://www.a11yproject.com/">The A11Y Project</a> is een
-              goede plek om te lezen over toegankelijkheid, daar staat ook een
-              checklist waar een website aan moet voldoen, en waarmee je je
+              Een goede toegankelijke website voldoet aan de Web Content
+              Accessibility Guidelines (WCAG) van het W3C. The A11Y Project is
+              een goede plek om te lezen over toegankelijkheid, daar staat ook
+              een checklist waar een website aan moet voldoen, en waarmee je je
               eigen site kunt controleren.
             </p>
             <p>
@@ -2110,9 +2103,49 @@
               Chrome browser kan uitvoeren. In de Devtools kun je Lighthouse
               gebruiken.
             </p>
+            <div>
+              <a href="https://www.youtube.com/watch?v=b0Q5Zp_yKaU"
+                >The new way to test accessibility with Chrome DevTools @
+                A11Ycasts</a
+              >
+              <a
+                href="https://developer.chrome.com/docs/lighthouse/accessibility/scoring"
+                >Lighthouse accessibility score @ chrome</a
+              >
+              <a href="https://www.w3.org/TR/WCAG22/"
+                >Web Content Accessibility Guidelines (WCAG) 2.2 @ W3</a
+              >
+            </div>
+            <div>
+              <a href="https://web.dev/articles/how-to-review"
+                >How to review for accessibility @ web.dev</a
+              >
+              <a href="https://www.a11yproject.com/checklist/"
+                >A11Y checklist @ The A11Y project</a
+              >
+              <a href=""
+                >Building the most inaccessible site possible with a perfect
+                Lighthouse score @ Matuzo</a
+              >
+            </div>
+            <div>
+              <a href="https://webaim.org/articles/voiceover/"
+                >Using VoiceOver to Evaluate Web Accessibility @ Webaim
+              </a>
+              <a href="https://support.freedomscientific.com/Downloads/JAWS"
+                >JAWS Screen Reading Software @ Freedom Scientific</a
+              >
+              <a href="https://www.nvaccess.org/download/"
+                >NVDA voor windows @ NV Access</a
+              >
+              <a href="https://dequeuniversity.com/screenreaders/"
+                >Screen Reader Keyboard Shortcuts and Gestures @ Deque
+                University</a
+              >
+            </div>
           </li>
           <li>
-            <h4>Dinsdag 14 oktokber</h4>
+            <h4 id="dinsdag-14-oktober">Dinsdag 14 oktokber</h4>
             <p>
               Vandaag had ik weer een CSS challenge, en een zeer interressante
               ook. Namelijk over kleur.
@@ -2198,11 +2231,293 @@
                 pink);</code
               >
             </p>
-            \
             <div>
               <a
                 href="https://piccalil.li/blog/a-pragmatic-guide-to-modern-css-colours-part-one/"
                 >A pragmatic guide to modern CSS colours @ Piccalilli</a
+              >
+              <a href="https://developer.chrome.com/docs/css-ui/css-color-mix"
+                >CSS color-mix() @ Adam Argyle</a
+              >
+              <a href="https://oklch.com/#0.7,0.1,251,100"
+                >OKLCH Color Picker & Converter @ oklch</a
+              >
+              <a
+                href="https://css-tricks.com/using-property-for-css-custom-properties/"
+                >Using @property for CSS Custom Properties @ CSS Tricks</a
+              >
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@property"
+                >@property @ MDN</a
+              >
+              <a
+                href="https://css-tricks.com/almanac/properties/b/border-image/"
+                >border-image @ CSS Tricks</a
+              >
+              <a href="https://web.dev/articles/light-dark"
+                >CSS color-scheme-dependent colors with light-dark() @
+                web.dev</a
+              >
+            </div>
+          </li>
+          <li>
+            <h4 id="woensdag-15-oktober">Woensdag 15 oktober 2025</h4>
+            <p>
+              Als frontender heb je de verantwoordelijkheid om een goede
+              gebruikerservaring voor eindgebruikers neer te zetten. Goede HTML
+              helpt bij die goede User Experience (UX). En slechte HTML zorgt
+              voor een slechte gebruikerservaring. Dat klinkt logisch, maar het
+              Internet (en ook ChatGPT) staat vol met voorbeelden van slechte
+              HTML. Ik heb gezien dat HTML veel biedt als basislaag. En met CSS
+              als extra laag kan ik dit er vaak ook nog mooi uit laten zien. Dit
+              noemen we Progressive Enhancement: zoek de simpelste techniek om
+              iets voor elkaar te krijgen, en verrijk die pas daarna. HTML heeft
+              meer dan 100 elementen, allemaal met hun eigen ingebouwde UX.
+            </p>
+            <p>
+              Ik ben verder gegaan met de issues die open stonden in mijn
+              projectboard, zoals de feedback van de opdrachtgever.
+            </p>
+            <div>
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a"
+                >The Anchor element @ MDN</a
+              >
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a#href"
+                >href attribute @ MDN</a
+              >
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a#download"
+                >download attribuut @ MDN</a
+              >
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a#target"
+                >target attribute @ MDN</a
+              >
+            </div>
+            <div>
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/img"
+                >The Image Embed element @ MDN</a
+              >
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/alt#usage_notes"
+                >HTMLImageElement: alt property @ MDN</a
+              >
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/label"
+                >The Label element @ MDN</a
+              >
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/fieldset"
+                >The Field Set element @ MDN</a
+              >
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements"
+                >h1–h6: The HTML Section Heading elements @ MDN</a
+              >
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/popover"
+                >HTML popover global attribute @ MDN</a
+              >
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/::backdrop"
+                >::backdrop @ MDN</a
+              >
+            </div>
+            <div>
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/details"
+                >The Details disclosure element @ MDN</a
+              >
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/details#open"
+                >Details with open attribute @ MDN</a
+              >
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/details#name"
+                >Details with name attribute @ MDN</a
+              >
+              <a
+                href="https://css-tricks.com/using-styling-the-details-element/"
+                >Using & Styling the Details Element @ Geoff Graham</a
+              >
+            </div>
+            <div>
+              <a
+                href="https://html.spec.whatwg.org/dev/images.html#:~:text=4.8.4.3%20Requirements%20for%20providing%20text%20to%20act%20as%20an%20alternative%20for%20images"
+                >4.8.4.3 Requirements for providing text to act as an
+                alternative for images @ HTML spec</a
+              >
+            </div>
+            <div>
+              <a
+                href="https://alexharri.com/blog/multi-cursor-code-editing-animated-introduction"
+                >Multi-cursor code editing: An animated introduction @ Alex
+                Harri</a
+              >
+              <a
+                href="https://code.visualstudio.com/docs/editing/codebasics#_multiple-selections-multicursor"
+                >Multiple selections (multi-cursor) @ Visual Studio Code</a
+              >
+            </div>
+          </li>
+          <li>
+            <h4 id="donderdag-16-oktober">Donderdag 16 oktober 2025</h4>
+            <p>
+              Vandaag wilde ik weer een hoofdstuk doen van de learn javascript
+              lessen. Ik heb de chapter over array's gemaakt, die ik tot nu toe
+              wel het moeilijkst vind.
+            </p>
+            <h5>Wat heb ik geleerd?</h5>
+            <p>
+              <code>const data = [1, 2, 3]</code> is een array die 3 getallen
+              bevat. De eigenschap <code>array.length</code> geeft het aantal
+              elementen in de array terug. Met <code>array.push(x)</code> kun je
+              de variabele x toevoegen aan het einde van de array, en deze
+              methode geeft daarna de nieuwe lengte van de array terug. Arrays
+              die met const zijn gedefinieerd, zijn geen echte constanten omdat
+              je de elementen erin kunt wijzigen, maar je kunt de array zelf
+              niet opnieuw toewijzen; het blijft dus altijd een array. De
+              methode <code>.forEach(callback)</code> loopt over elk item in de
+              array. Een callback is hierbij een functie die als parameter wordt
+              doorgegeven aan een andere functie. Het is handig om te beginnen
+              met een <code>console.log()</code> binnen de
+              <code>.forEach()</code> om te zien hoe de overgang van array naar
+              individueel item werkt, totdat je eraan gewend bent. De
+              <code>.forEach()</code> methode voert jouw callback uit voor elk
+              item, waarbij de eerste parameter telkens het betreffende array
+              item voorstelt. Het is aan te raden je arrays in het meervoud te
+              noemen en de items binnen de <code>.forEach()</code> in het
+              enkelvoud. Let er ook op dat je de return op de juiste plaats zet
+              in functies die gebruikmaken van <code>.forEach()</code>.
+            </p>
+            <div>
+              <a href="https://www.w3schools.com/js/js_arrays.asp"
+                >Javascript Arrays @ W3Schools</a
+              >
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push"
+                >Array.push @ MDN</a
+              >
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length"
+                >Array: length @ MDN</a
+              >
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach"
+                >Array.forEach() @ MDN</a
+              >
+              <a href="https://www.w3schools.com/jsref/met_console_log.asp"
+                >Console log() @ MDN</a
+              >
+            </div>
+          </li>
+          <li>
+            <h4 id="vrijdag-17-oktober">Vrijdag 17 oktober 2025</h4>
+            <p>
+              Deze week heb ik geleerd wat toegankelijkheid is en hoe ik een
+              toegankelijkheidstest kunt uitvoeren. Daarnaast hebben we gekeken
+              naar hoe je met HTML een goede User Experience (UX) neerzet als
+              front-ender. Vandaag stond in het teken van feedback geven en
+              krijgen. Ik heb feedback gekregen op mijn WCAG audit test op de
+              website van mijn werk. Hier is de
+              <a
+                href="https://github.com/JamieVos991/all-human-accessible-website/issues/6"
+                >issue</a
+              >.
+            </p>
+            <div>
+              <a
+                href="https://developer.chrome.com/docs/lighthouse/accessibility/use-landmarks/"
+                >HTML5 landmark elements are used to improve navigation @
+                chrome</a
+              >
+            </div>
+          </li>
+          <li>
+            <h4 id="maandag-27-oktober">Maandag 27 oktober 2025</h4>
+            <p>
+              Vandaag stond in het teken van kleuren en contrasten. Je denkt
+              misschien dat iedereen kleuren en contrasten op een zelfde manier
+              ervaart zoals jij. Maar het ervaren van kleuren op een website
+              wordt beïnvloed door omgevingsfactoren en hoe mensen kleuren
+              waarnemen. Ik heb geleerd hoe ik in inspector kan testen op
+              kleurenblindheid.
+              <i
+                >Open Chrome Devtools → Click 3 dots → Select More tools →
+                Select Rendering → Emulate vision deficiencies</i
+              >
+            </p>
+            <h5>Gebruik onderscheidende kleuren</h5>
+            <p>
+              Voor goed leesbare teksten, maar ook voor bijvoorbeeld de visuele
+              hiërarchie is het onderscheid in kleuren belangrijk. Een hoog
+              kleurcontrast valt meer op en weinig contrast zorgt ervoor dat
+              teksten moeilijk te lezen zijn. Effectieve kleurcontrasten zijn
+              complementaire kleuren. Dat zijn de kleuren die tegenover elkaar
+              staan op de kleurencirkel (Behalve bij rood en groen).
+            </p>
+            <h5>Teksten op plaatjes</h5>
+            <p>
+              Teksten op een plaatje worden vaak gebruikt in webdesign. Maar je
+              kan je misschien wel voorstellen dat het niet altijd goed te lezen
+              is, omdat de kleurcontrasten onvoldoende zijn.
+              <i
+                >Door het gebruiken van een overlay of semi-transparent gradient
+                is een tekst beter leesbaar.</i
+              >
+            </p>
+            <h5>Kleurcontrasten testen</h5>
+            <p>
+              In de richtlijnen staat waar je kleurcontrasten aan moeten voldoen
+              voor een goede toegankelijkheid. Hoe hoog of laag een
+              kleurcontrast is, kan je zien aan de contrast ratio. Daarvoor
+              wordt de voorgrondkleur vergeleken met de achtergrondkleur. Een
+              hoog contrast voor normale teksten heeft bijvoorbeeld een contrast
+              ratio van 9:1. Een te laag contrast is bijvoorbeeld 3:1. Voor
+              contrasten worden 3 levels onderscheiden: A level: het minimale
+              niveau waar het contrast aan moet voldoen AA level: een contrast
+              niveau dat voor de meeste gebruikers toegankelijk is AAA level:
+              het hoogste niveau, het is toegankelijk voor alle gebruikers
+              Kleurcontrast kan je testen en beoordelen met behulp van de WCAG
+              richtlijnen. Ik heb hiervoor de app
+              <i>Colour Contrast Analyser (CCA)</i> gedownload.
+            </p>
+            <div>
+              <a href="https://inclusive.microsoft.design/"
+                >Microsoft Inclusive Design @ Microsoft</a
+              >
+              <a
+                href="https://webdesign.tutsplus.com/designing-for-color-blindness-with-chrome-devtools--cms-35827a"
+                >Designing for Color Blindness With Chrome DevTools @ Anna
+                Monus</a
+              >
+              <a
+                href="https://24ways.org/2014/integrating-contrast-checks-in-your-web-workflow/"
+                >Integrating Contrast Checks in Your Web Workflow @ 24ways</a
+              >
+              <a
+                href="https://www.smashingmagazine.com/2023/08/designing-accessible-text-over-images-part1/"
+                >Designing Accessible Text Over Images: Best Practices,
+                Techniques, And Resources @ Hannah Milan</a
+              >
+              <a href="https://css-tip.com/gradient-overlay-border-image/"
+                >Add a gradient overlay using border-image @ CSS tip</a
+              >
+              <a href="https://www.a11yproject.com/checklist/#color-contrast"
+                >Color contrast Checklist @ A11Y Project
+              </a>
+              <a href="https://www.w3.org/WAI/WCAG22/quickref/?versions=2.1"
+                >How to Meet WCAG (Quick Reference) @ W3</a
+              >
+              <a
+                href="https://www.getstark.co/blog/accessible-contrast-ratios-and-a-levels-explained/"
+                >Accessible contrast ratios and A-levels explained @ Getstark</a
+              >
+              <a href="https://contrast-ratio.org/"
+                >Contrast ratio @ contrast-ratio</a
               >
             </div>
           </li>

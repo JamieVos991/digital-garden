@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
     sprints[0].classList.add("active");
   }
 
-  document.querySelectorAll("details").forEach((detail) => {
-    detail.open = true;
-  });
+  // document.querySelectorAll("details").forEach((detail) => {
+  //   detail.open = true;
+  // });
 });

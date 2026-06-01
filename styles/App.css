@@ -104,3 +104,14 @@ code {
 .oklch-kleur {
   color: oklch(0.6426 0.2426 25.67);
 }
+
+.hero {
+  gap: 1rem !important;
+  display: grid !important;
+  place-content: center !important;
+
+  li {
+    border: none !important;
+    padding: 0 !important;
+  }
+}
